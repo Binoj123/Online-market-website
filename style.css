@@ -175,3 +175,77 @@ line-height: 50px;
 .meal{
   margin-top: 80px;
 }
+.cities{
+margin-top: 100px;
+}
+.cities img{
+  width: 100%;
+  margin-top: 50px;
+}
+.cities li{
+  color: #e47e22;
+}
+.testimonials{
+  margin-top: 80px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(images/loc.jpg);
+  padding-top: 80px;
+  padding-bottom: 60px;
+  color: white;
+  background-attachment: fixed;
+}
+.testimonials p{
+line-height: 25px;
+text-align: justify;
+margin-top: 40px;
+}
+.testimonials cite img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+
+}
+.btn-block{
+  background-color: #e67e22;
+  color: white;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+.gap{
+  margin-top: 40px;
+}
+.form{
+  margin-top: 40px;
+}
+footer{
+background-color: #424242;
+color: white;
+}
+.foot{
+text-decoration: none;
+list-style:none;
+
+float: left;
+}
+.foot li a{
+  color: white;
+  text-decoration: none;
+
+}
+.foot li:hover{
+  color: white;
+  text-decoration: none;
+}
+.copyright{
+padding-bottom: 30px;
+}
+.icons li{
+  float: right;
+  margin-left: 25px;
+  font-size: 30px;
+ color: white;
+}
+.full{
+  padding-top: 50px;
+}
