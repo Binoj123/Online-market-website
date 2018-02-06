@@ -11,7 +11,7 @@ margin: 0 auto;
 
 }
 body{
-  font-family: Roboto;
+  font-family: 'Roboto';
 
 }
 .hero{
@@ -22,7 +22,7 @@ body{
   transform: translate(-50%,-50%);
 }
 header{
-background-image: linear-gradient(rgba(0,0,0,.7),rgba(0, 0, 0, 0.5)),url(images/type.jpg);
+background-image: linear-gradient(rgba(0,0,0,.7),rgba(0, 0, 0, 0.5)),url(images/on.png);
 height: 100vh;
 width: 100vw;
 background-position: center;
@@ -139,8 +139,9 @@ margin-left: 40%;
  margin-top: 60px;
 }
 .pic img{
-margin-left: 50%;
+margin-left: 20%;
 margin-top: 50px;
+width: 100%;
 }
 .work-step{
   margin-top: 50px;
@@ -187,7 +188,7 @@ margin-top: 100px;
 }
 .testimonials{
   margin-top: 80px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(images/loc.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(images/customer.jpg);
   padding-top: 80px;
   padding-bottom: 60px;
   color: white;
