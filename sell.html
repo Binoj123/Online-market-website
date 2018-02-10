@@ -105,10 +105,23 @@
 </div
 </div>
 </div>
-<div class="des">
-  <textarea class="form-control" rows="5" placeholder="Description of Item"></textarea>
-  <br>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="des">
+      <textarea class="form-control" rows="8" placeholder="Description of Item"></textarea>
+      <br>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <form method="post" action="upload.php" enctype="multipart/form-data">
+    <input type="hidden" name="MAX_FILE_SIZE" value="1000000"/>
+    <input name="uploadedfilee" type="file" style="height:35px;" /><br><br>
+   <input type="submit" value="Upload" name="submit" class="form-control">
+<?php include('upload.php');>
+    </form>
+  </div>
 </div>
+
 
 
 </div>
