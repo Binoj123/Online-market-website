@@ -2,48 +2,54 @@
 
 <?php
 
-$target_path = "photos/";
+//if ($_POST ["submit"]) {
 
-$target_path = $target_path . basename( $_FILES['uploadedfilee']['name']);
+  $target_path = "photos/";
 
-if(move_uploaded_file($_FILES['uploadedfilee']['tmp_name'], $target_path))
+  $target_path = $target_path . basename( $_FILES['fileupload']['name']);
 
-{
+  if(move_uploaded_file($_FILES['fileupload']['tmp_name'], $target_path))
 
-$conn = new mysqli("localhost", "root", "", "test_image");
+  {
 
-$sql = "INSERT INTO upload_image(`path`) VALUES ('$target_path')";
+  $conn = new mysqli("localhost", "root", "", "patas");
 
-if ($conn->query($sql) === TRUE) {
+  $sql = "INSERT INTO upload_image(`path`) VALUES ('$target_path')";
 
-echo "<br><br>";
+  if ($conn->query($sql) === TRUE) {
 
-} else {
+  echo "<br><br>";
 
-echo "Error: " . $sql . "<br>" . $conn->error;
+  } else {
 
-}
+  echo "Error: " . $sql . "<br>" . $conn->error;
 
-$sql1 = "SELECT path FROM upload_image order by id desc limit 1";
+  }
 
-$result1 = $conn->query($sql1);
+  $sql1 = "SELECT path FROM upload_image order by id desc limit 1";
 
-if ($result1->num_rows > 0) {
+  $result1 = $conn->query($sql1);
 
-// output data of each row
+  if ($result1->num_rows > 0) {
 
-while($row = $result1->fetch_assoc()) {
+  // output data of each row
 
-$path=$row["path"];
+  while($row = $result1->fetch_assoc()) {
 
-echo "<img src='$path' height='280' width='280' />";
+  $path=$row["path"];
 
-}
+  echo "<img src='$path' height='280' width='320' />";
 
-}
+  }
 
-$conn->close();
+  }
 
-}
+  $conn->close();
+
+  }
+
+//}
+
+
 
 ?>

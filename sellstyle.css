@@ -75,9 +75,18 @@ padding-bottom: 20px;
 .icons li{
   float: none;
 }
+
 .foot li a{
   float: none;
   margin-left: 80px;
   text-align: center;
 }
+}
+.upimage{
+  margin-top: 20px;
+  text-align: center;
+}
+.submiter{
+  margin-top: 50px;
+
 }
