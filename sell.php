@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +12,7 @@
   <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </head>
@@ -119,7 +119,7 @@
   </div>
   <div class="col-lg-6">
 
-    <input name="fileupload" id="fileupload" type="file" />
+    <input name="fileupload" id="fileupload" type="file"  />
     <hr />
     <div id="dvPreview">
     </div>
@@ -132,7 +132,8 @@
 </div>
   </div>
 
-    <input type="submit" class="btn btn-warning btn-block" name="submit"></button>
+   <input type="submit" class="btn btn-warning btn-block" name="submit" >
+
 </div>
 
 </div>
@@ -201,5 +202,5 @@
       });
     });
     </script>
-  </body>
+</body>
 </html>
