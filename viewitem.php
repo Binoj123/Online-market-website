@@ -28,10 +28,19 @@
     <div class="col-lg-3 col-md-3">
     <div class="container-fluid left-side"></div>
     </div>
-    <div class="col-lg-9 col-md-9">
+    <div class="col-lg-9 col-md-9 all">
     <input type="text" id="myInput" class="form-control" placeholder="What are you looking for buy?">
     <ul class="list-group" id="myList">
-    <li class="list-group-item">First item</li>
+    <li class="list-group-item">
+      <div class="description">
+      <a href="#"><h2>This is Title</h2></a>  
+      number of days <br><br>
+      <button type="button" class="viewmore">View More</button>
+      
+      </div>
+    
+    <img src="images/user2.jpg" alt="item-photo" class="itemimage">  
+    </li>
     <li class="list-group-item">Second item</li>
     <li class="list-group-item">Third item</li>
     <li class="list-group-item">Fourth</li>

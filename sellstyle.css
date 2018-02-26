@@ -10,6 +10,7 @@ body{
 
 
 }
+
 .logo img{
   height: 100px;
   float: left;
@@ -38,6 +39,7 @@ color: white;
 .large{
   border: 2px solid white;
   border-radius: 10px;
+  
 }
 footer{
   margin-top: 100px;
@@ -89,4 +91,7 @@ padding-bottom: 20px;
 .submiter{
   margin-top: 50px;
 
+}
+.mathraa{
+  margin-top: 20px;
 }

@@ -124,12 +124,12 @@
     <div id="dvPreview">
     </div>
 
-</div>
-</div>
+  </div>
+  </div>
 
 
 
-</div>
+  </div>
   </div>
 
    <input type="submit" class="btn btn-warning btn-block" name="submit" >
