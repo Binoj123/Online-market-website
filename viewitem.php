@@ -1,3 +1,6 @@
+
+<?php require_once('ums/select-query.php') ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,6 +26,8 @@
     <div class="text-center"><img src="images/logo3.png" alt="logo"></div>
 
 </header>
+
+
 <div class="container">
     <div class="row">
     <div class="col-lg-3 col-md-3">
@@ -32,7 +37,7 @@
       <input type="text" id="myInput" class="form-control" placeholder="What are you looking for buy?"><br>
       <ul class="list-group" id="myList">
       <li class="list-group-item">
-     <a href="#"><h2>1 This is Title</h2></a>  
+     <a href="#"><h2><?php echo $record['email'];?></h2></a>  
       <div class="description">
        
         <p>number of days</p>
@@ -77,6 +82,36 @@
 
 
 </div>
+<footer>
+<div class="container" >
+
+  <div class="row full">
+    <div class="col-md-6">
+      <ul class="foot">
+        <li><a href="">About Us</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Press</a></li>
+        <li><a href="">iOS App</a></li>
+        <li><a href="">Android App</a></li>
+      </ul>
+    </div>
+<div class="col-md-6">
+  <ul class="icons">
+  <a href="#"><li class="fa fa-instagram"></li></a>
+  <a href="#"><li class="fa fa-google-plus"></li></a>
+  <a href="#"><li class="fa fa-twitter"></li></a>
+  <a href="#"><li class="fa fa-facebook"></li></a>
+  </ul>
+</div>
+
+  </div>
+
+<div class="copyright">
+  <p class="text-center">Copyrigth @ 2018 by Binoj.All rigth reserved.</p>
+</div>
+</div>
+  </footer>
+
 
 <script>
 $(document).ready(function(){
