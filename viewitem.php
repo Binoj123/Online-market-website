@@ -37,7 +37,7 @@
       <input type="text" id="myInput" class="form-control" placeholder="What are you looking for buy?"><br>
       <ul class="list-group" id="myList">
       <li class="list-group-item">
-     <a href="#"><h2><?php echo $record['email'];?></h2></a>  
+     <a href="single.php"><h2><?php echo $record['email'];?></h2></a>  
       <div class="description">
        
         <p>number of days</p>
