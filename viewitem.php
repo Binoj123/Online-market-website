@@ -43,7 +43,9 @@
         <p>number of days</p>
         <button type="button" class="btn btn-primary viewmore">View More</button>
       </div>
-    <img src="images/user2.jpg" alt="item-photo" class="itemimage">  
+     <?php echo "<img src='$path'>"; ?>
+      <!-- <img src="images/user2.jpg" alt="item-photo" class="itemimage"> -->
+   
     </li>
     <li class="list-group-item">
     <a href="#"><h2>2 This is Title</h2></a>  
