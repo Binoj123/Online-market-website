@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -25,7 +26,8 @@
 <section>
   <div class="container main">
       <h2>Title</h2>
-<div class="row">
+<div class="row upper">
+
 <div class="col-lg-4">
   <h4>Photo</h4>
   <img src="images/user2.jpg" alt="item-image">
@@ -37,13 +39,44 @@
 </div>
 <div class="row middle">
 <div class="col-md-12">
-  <h4>Contact Details</h4>
+  <h4><li class="fa fa-map-marker"></li>   Location</h4><br>
+  <p>place</p><br>
+  <h4><li class="fa fa-address-card"></li>   Contact Details</h4><br>
   <p>Seller Name :</p>
   <p>Seller Contact No :</p>
+  <p>Seller Email Address :</p><br>
 </div>
 </div>
 </div>
 </section>
+<footer>
+<div class="container" >
 
+  <div class="row full">
+    <div class="col-md-6">
+      <ul class="foot">
+        <li><a href="">About Us</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Press</a></li>
+        <li><a href="">iOS App</a></li>
+        <li><a href="">Android App</a></li>
+      </ul>
+    </div>
+<div class="col-md-6">
+  <ul class="icons">
+  <a href="#"><li class="fa fa-instagram"></li></a>
+  <a href="#"><li class="fa fa-google-plus"></li></a>
+  <a href="#"><li class="fa fa-twitter"></li></a>
+  <a href="#"><li class="fa fa-facebook"></li></a>
+  </ul>
+</div>
+
+  </div>
+
+<div class="copyright">
+  <p class="text-center">Copyrigth @ 2018 by Binoj.All rigth reserved.</p>
+</div>
+</div>
+  </footer>
 </body>
 </html>
