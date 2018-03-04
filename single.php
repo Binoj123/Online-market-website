@@ -1,3 +1,8 @@
+<?php require_once('ums/select-query.php') ?>
+<?php $query = "SELECT * FROM sell_item";
+
+$result_set = mysqli_query($connction,$query);
+ $record = mysqli_fetch_assoc($result_set); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +30,7 @@
 
 <section>
   <div class="container main">
-      <h2>Title</h2>
+      <h2><?php echo $record['nameofsell'];?></h2>
 <div class="row upper">
 
 <div class="col-lg-4">
@@ -34,17 +39,17 @@
 </div>
 <div class="col-lg-8">
     <h4>Description</h4>
-  <textarea name="description" rows="13" cols="80"></textarea>
+  <textarea name="description" rows="13" cols="80"><?php echo $record['doi'];?></textarea>
 </div>
 </div>
 <div class="row middle">
 <div class="col-md-12">
   <h4><li class="fa fa-map-marker"></li>   Location</h4><br>
-  <p>place</p><br>
+  <p><?php echo $record['location'];?></p><br>
   <h4><li class="fa fa-address-card"></li>   Contact Details</h4><br>
-  <p>Seller Name :</p>
-  <p>Seller Contact No :</p>
-  <p>Seller Email Address :</p><br>
+  <p>Seller Name :<?php echo $record['uname'];?></p>
+  <p>Seller Contact No :<?php echo $record['phone'];?></p>
+  <p>Seller Email Address :<?php echo $record['city'];?></p><br>
 </div>
 </div>
 </div>

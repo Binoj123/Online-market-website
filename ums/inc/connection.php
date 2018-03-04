@@ -4,6 +4,6 @@ $connction = mysqli_connect('localhost','root','','patas');
 if (mysqli_connect_errno()) {
   die('database connection failed'. mysqli_connect_errno());
 }else {
-  echo "connection successful";
+  // echo "connection successful";
 }
  ?>
