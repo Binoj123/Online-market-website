@@ -1,13 +1,25 @@
 
 <?php require_once('ums/select-query.php') ?>
+<?php $query = "SELECT * FROM sell_item";
+
+$result_set = mysqli_query($connction,$query);
+
+ $record = mysqli_fetch_assoc($result_set);
+
+
+
+ $sql1 = "SELECT path FROM upload_image ORDER BY id DESC LIMIT 1";
+  $result = $connction->query($sql1);
+  $path1 = $row['path'];
+  ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 
   <meta charset="utf-8">
-  
-  
+
+
   <title>Choose your items</title>
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -36,54 +48,49 @@
     <div class="col-lg-9 col-md-9 all">
       <input type="text" id="myInput" class="form-control" placeholder="What are you looking for buy?"><br>
       <ul class="list-group" id="myList">
-      <li class="list-group-item">
-     <a href="single.php"><h2><?php echo $record['email'];?></h2></a>  
-      <div class="description">
-       
-        <p>number of days</p>
-        <button type="button" class="btn btn-primary viewmore">View More</button>
-      </div>
-     <?php echo "<img src='$path'>"; ?>
-      <!-- <img src="images/user2.jpg" alt="item-photo" class="itemimage"> -->
-   
-    </li>
-    <li class="list-group-item">
-    <a href="#"><h2>2 This is Title</h2></a>  
-      <div class="description">
-       
-        <p>number of days</p>
-        <button type="button" class="btn btn-primary viewmore">View More</button>
-      </div>
-    <img src="images/user2.jpg" alt="item-photo" class="itemimage">  
-    </li>
-    <li class="list-group-item">
-    <a href="#"><h2>3 This is Title</h2></a>  
-      <div class="description">
-       
-        <p>number of days</p>
-        <button type="button" class="btn btn-primary viewmore">View More</button>
-      </div>
-    <img src="images/user2.jpg" alt="item-photo" class="itemimage">  
-    </li>
-    <li class="list-group-item">
-    <a href="#"><h2>4 This is Title</h2></a>  
-      <div class="description">
-       
-        <p>number of days</p>
-        <button type="button" class="btn btn-primary viewmore">View More</button>
-      </div>
-     <img src="images/user2.jpg" alt="item-photo" class="itemimage">  
-     </li>
-     </ul>  
-      </div>
-       </div>
-  
 
-      </div>
-      
+        <?php
+            $rows= $result_set->num_rows;
+         for($i=0;$i<$rows;$i++){
+
+           $row=$result_set->fetch_array(MYSQLI_ASSOC);
+           $result_set->data_seek($i);
+           $nameofsell=$row['nameofsell'];
+           $path=$row['path'];
+           $id=$row['id'];
+
+        echo<<<_END
 
 
-</div>
+
+        <li class="list-group-item">
+       <a href="single.php"><h2>$nameofsell</h2></a>
+        <div class="description">
+
+          <p>number of days</p>
+          <form action="single.php" method="post">
+          <button type="submit" class="btn btn-primary viewmore">View More</button>
+          <input type="hidden" value="$id" name="id">
+          </form>
+
+        </div>
+
+        <img src="$path" alt="item-photo" class="itemimage">
+
+      </li>
+_END;
+
+ }
+         ?>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
 <footer>
 <div class="container" >
 
@@ -124,7 +131,7 @@ $(document).ready(function(){
     });
   });
 });
-</script>   
+</script>
 
 </body>
 </html>

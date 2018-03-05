@@ -1,8 +1,14 @@
 <?php require_once('ums/select-query.php') ?>
-<?php $query = "SELECT * FROM sell_item";
 
+
+<?php
+$id=$_POST['id'];
+ $query = "SELECT * FROM  `sell_item` WHERE `id`='$id' ";
+echo "".$_POST['id'];
 $result_set = mysqli_query($connction,$query);
- $record = mysqli_fetch_assoc($result_set); ?>
+ $record = mysqli_fetch_assoc($result_set);
+$space =" ";
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,9 +53,9 @@ $result_set = mysqli_query($connction,$query);
   <h4><li class="fa fa-map-marker"></li>   Location</h4><br>
   <p><?php echo $record['location'];?></p><br>
   <h4><li class="fa fa-address-card"></li>   Contact Details</h4><br>
-  <p>Seller Name :<?php echo $record['uname'];?></p>
-  <p>Seller Contact No :<?php echo $record['phone'];?></p>
-  <p>Seller Email Address :<?php echo $record['city'];?></p><br>
+  <p>Seller Name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:<b> <?php echo $record['uname'];?></b></p>
+  <p>Seller Contact Number &nbsp:<b> <?php echo $record['phone'];?></b></p>
+  <p>Seller Email Address &nbsp&nbsp&nbsp&nbsp: <b><?php echo $record['city'];?></b></p><br>
 </div>
 </div>
 </div>
