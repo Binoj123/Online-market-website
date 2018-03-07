@@ -45,17 +45,22 @@ $space =" ";
 </div>
 <div class="col-lg-8">
     <h4>Description</h4>
-  <textarea name="description" rows="13" cols="80"><?php echo $record['doi'];?></textarea>
+  <textarea style="padding:20px;"name="description" rows="13" cols="80"><?php echo $record['doi'];?></textarea>
 </div>
 </div>
 <div class="row middle">
-<div class="col-md-12">
+<div class="col-md-6">
   <h4><li class="fa fa-map-marker"></li>   Location</h4><br>
   <p><?php echo $record['location'];?></p><br>
+
   <h4><li class="fa fa-address-card"></li>   Contact Details</h4><br>
   <p>Seller Name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:<b> <?php echo $record['uname'];?></b></p>
   <p>Seller Contact Number &nbsp:<b> <?php echo $record['phone'];?></b></p>
   <p>Seller Email Address &nbsp&nbsp&nbsp&nbsp: <b><?php echo $record['city'];?></b></p><br>
+</div>
+<div class="col-md-6 pricer">
+  <h4><li class="fa fa-dollar"></li>   Price</h4><br>
+  <p style="border-radius:5px; padding-left:10px; font-size:50px; background-color:rgb(78, 249, 237);">Rs. <?php echo $record['price'];?>.00</p><br>
 </div>
 </div>
 </div>

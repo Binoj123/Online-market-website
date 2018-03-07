@@ -2,7 +2,7 @@
 
 <?php
 
-//if ($_POST ["submit"]) {
+ // if ($_POST ['submit']) {
 
   $target_path = "photos/";
 
@@ -26,30 +26,40 @@
 
   }
 
-  $sql1 = "SELECT path FROM upload_image order by id desc limit 1";
-
-  $result1 = $conn->query($sql1);
-
-  if ($result1->num_rows > 0) {
-
-  // output data of each row
-
-  while($row = $result1->fetch_assoc()) {
-
-  $path=$row["path"];
-
-  echo "<img src='$path' height='280' width='320' />";
-
-  }
-
-  }
+  // $sql1 = "SELECT path FROM upload_image order by id desc limit 1";
+  //
+  // $result1 = $conn->query($sql1);
+  //
+  // if ($result1->num_rows > 0) {
+  //
+  // // output data of each row
+  //
+  // while($row = $result1->fetch_assoc()) {
+  //
+  // $path=$row["path"];
+  //
+  // echo "<img src='$path' height='280' width='320' />";
+  //
+  // }
+  //
+  // }
 
   $conn->close();
 
   }
 
-//}
+ // }
 
 
 
 ?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
