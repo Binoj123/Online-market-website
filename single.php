@@ -7,7 +7,7 @@ $id=$_POST['id'];
 echo "".$_POST['id'];
 $result_set = mysqli_query($connction,$query);
  $record = mysqli_fetch_assoc($result_set);
-$space =" ";
+
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +41,7 @@ $space =" ";
 
 <div class="col-lg-4">
   <h4>Photo</h4>
-  <img src="images/user2.jpg" alt="item-image">
+  <img src="<?php echo $record['path']; ?>" alt="item-image">
 </div>
 <div class="col-lg-8">
     <h4>Description</h4>
