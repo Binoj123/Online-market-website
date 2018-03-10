@@ -19,8 +19,8 @@
       <div class="container-fluid">
         <div class="row">
           <ul class="mainnav">
-            <li><a href="#" onclick="document.getElementById('id01').style.display='block'">LOGIN</a></li>
-            <li><a href="">SIGN UP</a></li>
+            <li><a href="#login" onclick="document.getElementById('id01').style.display='block'">LOGIN</a></li>
+            <li><a href="#signup" onclick="document.getElementById('id02').style.display='block'">SIGN UP</a></li>
             <li><a href="">CATOGORY</a></li>
             <li><a href="">ABOUT US</a></li>
             <li><a href="">SERVICE</a></li>
@@ -36,8 +36,8 @@
     </div>
 
     <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label for="uname"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="uname" required>
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
@@ -49,10 +49,65 @@
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button"  onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
+</div>
+<div id="id02" class="modal">
+
+<form class="modal-content animate" action="/action_page.php">
+<div  class="imgcontainer">
+<!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
+<img src="images/user2.jpg" alt="User" class="avatar">
+</div>
+
+<div class="container">
+<label for="uname" ><b>Enter your Details</b></label>
+<input type="text" placeholder="Name" name="uname" required>
+<input type="text" placeholder="Email" name="email" required>
+<input type="text" placeholder="(+94)Telephone" name="telephone" required>
+<select class="form-control" name="location" id="sel1">
+  <option>Colombo</option>
+  <option>Gampaha</option>
+  <option>Kaluthara</option>
+  <option>Galle</option>
+  <option>Matara</option>
+  <option>Hambanthota</option>
+  <option>Kegalle</option>
+  <option>Rathnapura</option>
+  <option>Badulla</option>
+  <option>Bandarawela</option>
+  <option>Trinkomalee</option>
+  <option>Batticaloa</option>
+  <option>Ampara</option>
+  <option>Kandy</option>
+  <option>Nuwara Eliya</option>
+  <option>Matale</option>
+  <option>Puththalama</option>
+  <option>Kurunegala</option>
+  <option>Anuradhapura</option>
+  <option>Polonnaruwa</option>
+  <option>Mannar</option>
+  <option>Vavniya</option>
+  <option>Mullative</option>
+  <option>Kilinochchi</option>
+  <option>Jaffna</option>
+</select>
+<input type="text" placeholder="City" name="psw" required>
+<input type="password" placeholder="Password" name="psw" required>
+<input type="password" placeholder="Confirm Password" name="psw" required>
+<button type="submit">Login</button>
+<label>
+  <input type="checkbox" checked="checked" name="remember"> Remember me
+</label>
+</div>
+
+<div class="container" style="background-color:#f1f1f1">
+<button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+<span class="psw">Forgot <a href="#">password?</a></span>
+</div>
+</form>
 </div>
 
       <div class="hero">
@@ -297,11 +352,14 @@ who is such man that like him or her netherless to do main got he war
   <script>
   // Get the modal
   var modal = document.getElementById('id01');
-
+  var modal2 = document.getElementById('id02');
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
       if (event.target == modal) {
-          modal.style.display = "none";
+        window.location.assign("index.html");
+
+      }else if (event.target == modal2) {
+        modal.style.display = "none";
       }
   }
   </script>
