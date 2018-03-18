@@ -7,6 +7,10 @@ $result_set = mysqli_query($connction,$query);
  $record = mysqli_fetch_assoc($result_set);
 
 
+
+ $sql1 = "SELECT path FROM patas ORDER BY id DESC LIMIT 1";
+  $result = $connction->query($sql1);
+  $path1 = $row['path'];
   ?>
 
 <!DOCTYPE html>
@@ -52,7 +56,7 @@ $result_set = mysqli_query($connction,$query);
            $row=$result_set->fetch_array(MYSQLI_ASSOC);
            $result_set->data_seek($i);
            $nameofsell=$row['nameofsell'];
-           $path="photos/".$row['path'];
+           $path=$row['path'];
            $id=$row['id'];
 
         echo<<<_END
@@ -120,7 +124,6 @@ _END;
 
 <script>
 $(document).ready(function(){
-
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     $("#myList li").filter(function() {
@@ -128,8 +131,6 @@ $(document).ready(function(){
     });
   });
 });
-
-
 </script>
 
 </body>
