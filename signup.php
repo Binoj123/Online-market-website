@@ -1,3 +1,37 @@
+<?php require_once('ums/inc/connection.php') ?>
+
+<?php
+
+ if (isset($_POST ['submit'])) {
+print_r($_POST);
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$telephone = $_POST['telephone'];
+$district = $_POST['district'];
+$city = $_POST['city'];
+$password = $_POST['password'];
+
+
+$query = "INSERT INTO signup(name,email,telephone,district,city,password)VALUES('{$name}','{$email}',{$telephone},'{$district}','{$city}','{$password}')";
+$result = mysqli_query($connction,$query);
+
+if ($result) {
+  echo "1 record added";
+
+}else {
+  echo "database query failed.";
+}
+
+
+
+  $connction->close();
+
+
+
+ }
+
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -26,13 +60,13 @@
       <div class="hero">
       <h3 class="text-center">Lets join with us...</h3><br>
       </div>
-    <form class="" action="ums/insert_sign.php" method="post">
-      <input type="text" name="uname" placeholder="Name" class="form-control"><br>
+    <form class="" action="ums/insert-sign.php" method="post">
+      <input type="text" name="name" placeholder="Name" class="form-control"><br>
       <input type="email" name="email" placeholder="Email" class="form-control"><br>
-      <input type="text" name="phone" placeholder="Telephone Number" class="form-control" ><br>
+      <input type="text" name="telephone" placeholder="Telephone Number" class="form-control" ><br>
       <div class="form-group">
       <label style="color:white;" for="sel1">Select your location (District)</label>
-      <select class="form-control" name="location" id="sel1">
+      <select class="form-control" name="district" id="sel1">
         <option>Colombo</option>
         <option>Gampaha</option>
         <option>Kaluthara</option>
@@ -61,8 +95,8 @@
       </select>
       </div>
       <input type="text" name="city" placeholder="City" class="form-control"><br>
-      <input class="form-control" placeholder="Password" type="password" name="password" value=""><br>
-      <input class="form-control" placeholder="Confirm password" type="password" name="cpassword" value=""><br>
+      <input class="form-control"  type="password" name="password" value=""><br>
+      <input class="form-control"  type="password" name="cpassword" value=""><br>
 <input type="submit" class="btn btn-warning btn-block" style="" name="" value="submit">
     </form>
 

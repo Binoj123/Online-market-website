@@ -1,3 +1,7 @@
+<?php
+session_start();
+if (!isset($_SESSION['email']) && $_SESSION['password'] == 'asd'){
+?>
 
 <!DOCTYPE html>
 <html>
@@ -204,3 +208,10 @@
     </script>
 </body>
 </html>
+<?php
+}
+
+else {
+    header("location:index.php");
+}
+?>
