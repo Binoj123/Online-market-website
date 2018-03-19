@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['email']) && $_SESSION['password'] == 'asd'){
+if ($_SESSION['susername']=="elptiya" && $_SESSION['spassword']=="asd"){
 ?>
 
 <!DOCTYPE html>
@@ -16,9 +16,7 @@ if (!isset($_SESSION['email']) && $_SESSION['password'] == 'asd'){
   <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
 </head>
   <body>
     <header>
@@ -206,12 +204,47 @@ if (!isset($_SESSION['email']) && $_SESSION['password'] == 'asd'){
       });
     });
     </script>
+
 </body>
+
 </html>
 <?php
 }
 
 else {
-    header("location:index.php");
+  ?>
+  <div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="memberModalLabel">You should signing in first!</h4>
+        </div>
+        <div class="modal-body">
+          <p>However the account provided is not known.<BR>
+          If you just got invited to the group, please wait for a day to have the database synchronized.</p>
+
+          <p>You will now be shown the Demo site.</p>
+        </div>
+        <div class="modal-footer">
+          <input type="button" class="btn btn-info" value="Login page" onclick=" relocate_home()">
+     <!--     <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <?php
+echo "<script>
+$(document).ready(function () {
+
+ $('#memberModal').modal('show');
+
+});
+function relocate_home()
+{
+location.href = 'test4.html';
+}
+</script>";
+// header("location:index.php");
 }
 ?>
