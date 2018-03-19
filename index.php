@@ -1,8 +1,6 @@
-<?php
-session_start();
-$_SESSION['email'] = "green";
-$_SESSION['password'] = "cat";
- ?>
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,7 +22,7 @@ $_SESSION['password'] = "cat";
       <div class="container-fluid">
         <div class="row">
           <ul class="mainnav">
-            <li><a href="#login" onclick="document.getElementById('id01').style.display='block'">LOGIN</a></li>
+            <li><a href="test4.html" onclick="document.getElementById('id01').style.display='block'">LOGIN</a></li>
             <li><a href="signup.php" onclick="document.getElementById('id02').style.display='block'">SIGN UP</a></li>
             <li><a href="">CATOGORY</a></li>
             <li><a href="">ABOUT US</a></li>
@@ -34,30 +32,33 @@ $_SESSION['password'] = "cat";
       </div>
       <div id="id01" class="modal">
 
-  <form class="modal-content animate" action="/action_page.php">
+<form class="modal-content animate" action="login.php" accept-charset="UTF-8">
     <div  class="imgcontainer">
       <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
       <img src="images/user2.jpg" alt="User" class="avatar">
     </div>
 
     <div class="container">
+
       <label for="uname"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="uname" required>
+      <input type="text"  name="uname" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password"  name="psw" required>
+        <input type="submit" name="submit" value="submit">
 
-      <button type="submit">Login</button>
+      <!-- <button type="submit">Login</button> -->
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
+
       <button type="button"  onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
-  </form>
+</form>
 </div>
 
 
