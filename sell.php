@@ -1,6 +1,12 @@
+
 <?php
+
 session_start();
+
+if (isset($_SESSION['susername'])){
+
 if ($_SESSION['susername']=="elptiya" && $_SESSION['spassword']=="asd"){
+
 ?>
 
 <!DOCTYPE html>
@@ -8,6 +14,7 @@ if ($_SESSION['susername']=="elptiya" && $_SESSION['spassword']=="asd"){
 <head>
   <meta charset="utf-8">
   <title>Selling your items</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="js/bootstrap.min.js">
@@ -16,6 +23,9 @@ if ($_SESSION['susername']=="elptiya" && $_SESSION['spassword']=="asd"){
   <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+
+
+
 
 </head>
   <body>
@@ -213,7 +223,11 @@ if ($_SESSION['susername']=="elptiya" && $_SESSION['spassword']=="asd"){
 
 else {
   ?>
+
+  <div id="memberModal" class="modal" >
+
   <div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true">
+
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -242,7 +256,11 @@ $(document).ready(function () {
 });
 function relocate_home()
 {
+
+location.href = 'index.php';
+=======
 location.href = 'test4.html';
+
 }
 </script>";
 // header("location:index.php");

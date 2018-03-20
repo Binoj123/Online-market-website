@@ -31,8 +31,15 @@
         </div>
       </div>
       <div id="id01" class="modal">
+        <div class="mheading">
+          <h2 class="text-center">Login to patas.lk</h2>
+        </div>
+<form accept-charset="UTF-8" action="/patas/login.php" class="modal-content animate" method="post"  >
+
+
 
 <form class="modal-content animate" action="login.php" accept-charset="UTF-8">
+
     <div  class="imgcontainer">
       <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
       <img src="images/user2.jpg" alt="User" class="avatar">
@@ -40,23 +47,33 @@
 
     <div class="container">
 
+
       <label for="uname"><b>Email</b></label>
       <input type="text"  name="uname" required>
 
+
+      <label for="uname"><b>Email</b></label>
+      <input type="email" style="width:100%; height:45px; padding-left:10px;" name="username" required>
+      <br><br>
       <label for="psw"><b>Password</b></label>
+
+      <input type="password" style="padding-left:10px; height:45px;"  name="psw" required>
+        <!-- <input type="submit" name="submit" value="submit"> -->
+
       <input type="password"  name="psw" required>
         <input type="submit" name="submit" value="submit">
 
+
       <!-- <button type="submit">Login</button> -->
       <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
+        <input type="checkbox" name="remember"> Remember me
       </label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
 
       <button type="button"  onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <span class="psw">Forgot <a href="email.php">password?</a></span>
     </div>
 </form>
 </div>
