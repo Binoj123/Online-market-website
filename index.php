@@ -22,7 +22,7 @@
       <div class="container-fluid">
         <div class="row">
           <ul class="mainnav">
-            <li><a href="#login" onclick="document.getElementById('id01').style.display='block'">LOGIN</a></li>
+            <li><a href="test4.html" onclick="document.getElementById('id01').style.display='block'">LOGIN</a></li>
             <li><a href="signup.php" onclick="document.getElementById('id02').style.display='block'">SIGN UP</a></li>
             <li><a href="">CATOGORY</a></li>
             <li><a href="">ABOUT US</a></li>
@@ -37,6 +37,9 @@
 <form accept-charset="UTF-8" action="/patas/login.php" class="modal-content animate" method="post"  >
 
 
+
+<form class="modal-content animate" action="login.php" accept-charset="UTF-8">
+
     <div  class="imgcontainer">
       <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
       <img src="images/user2.jpg" alt="User" class="avatar">
@@ -44,14 +47,24 @@
 
     <div class="container">
 
+
+      <label for="uname"><b>Email</b></label>
+      <input type="text"  name="uname" required>
+
+
       <label for="uname"><b>Email</b></label>
       <input type="email" style="width:100%; height:45px; padding-left:10px;" name="username" required>
       <br><br>
       <label for="psw"><b>Password</b></label>
+
       <input type="password" style="padding-left:10px; height:45px;"  name="psw" required>
         <!-- <input type="submit" name="submit" value="submit"> -->
 
-      <button type="submit">Login</button>
+      <input type="password"  name="psw" required>
+        <input type="submit" name="submit" value="submit">
+
+
+      <!-- <button type="submit">Login</button> -->
       <label>
         <input type="checkbox" name="remember"> Remember me
       </label>

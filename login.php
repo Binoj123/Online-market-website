@@ -1,5 +1,6 @@
   <?php require_once('ums/inc/connection.php') ?>
 
+
   <?php
 
   // print_r($_POST);
@@ -95,6 +96,19 @@ if (($email==$username)&&($qpassword==$password)) {
 }
 
 
+=======
+<pre>
+  <?php
+
+  print_r($_POST);
+  $username = $_POST['username'];
+  $password = $_POST['psw'];
+  session_start();
+   $_SESSION['susername'] = $username;
+   $_SESSION['spassword'] = $password;
+echo "username  {$_SESSION['susername']} <br>";
+echo "password  {$_SESSION['spassword']} <br>";
+
   ?>
 </pre>
 
@@ -102,6 +116,7 @@ if (($email==$username)&&($qpassword==$password)) {
 <html>
   <head>
     <meta charset="utf-8">
+
     <title>Login status</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -126,5 +141,12 @@ $(document).ready(function () {
 
 });
 </script>
+
+    <title>login</title>
+
+  </head>
+  <body>
+<a href="index.php">home page</a>
+
   </body>
 </html>
