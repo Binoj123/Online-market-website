@@ -2,7 +2,7 @@
 
 <?php
 
- if (isset($_POST ['submit'])) {
+ if (isset($_POST['submit'])) {
 print_r($_POST);
 
 $name = $_POST['name'];
@@ -54,6 +54,9 @@ if ($result) {
       <div class="row">
         <img src="images/logo3.png" alt="logo">
       </div>
+      <div class="home">
+      <a href="index.php">Back to >> Home Page</a>
+      </div>
 
 </div>
     <div class="container info">
@@ -95,8 +98,8 @@ if ($result) {
       </select>
       </div>
       <input type="text" name="city" placeholder="City" class="form-control"><br>
-      <input class="form-control"  type="password" name="password" value=""><br>
-      <input class="form-control"  type="password" name="cpassword" value=""><br>
+      <input class="form-control" id="password" type="password" name="password" value=""><br>
+      <input class="form-control"  id="cpassword" type="password" name="cpassword" value=""><br>
 <input type="submit" class="btn btn-warning btn-block" style="" name="" value="submit">
     </form>
 
@@ -130,5 +133,21 @@ if ($result) {
   </div>
   </div>
     </footer>
+    <script type="text/javascript">
+    var password = document.getElementById("password")
+, confirm_password = document.getElementById("cpassword");
+
+function validatePassword(){
+if(password.value != confirm_password.value) {
+  confirm_password.setCustomValidity("Passwords Don't Match");
+} else {
+  confirm_password.setCustomValidity('');
+}
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+
+    </script>
   </body>
 </html>

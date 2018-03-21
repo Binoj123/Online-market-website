@@ -1,6 +1,7 @@
 
 <?php require_once('ums/select-query.php') ?>
-<?php $query = "SELECT * FROM sell_item";
+<?php
+$query = "SELECT * FROM sell_item";
 
 $result_set = mysqli_query($connction,$query);
 
@@ -47,7 +48,7 @@ $result_set = mysqli_query($connction,$query);
 
         <?php
             $rows= $result_set->num_rows;
-         for($i=0;$i<$rows;$i++){
+         for($i=0;$i<=$rows;$i++){
 
            $row=$result_set->fetch_array(MYSQLI_ASSOC);
            $result_set->data_seek($i);
