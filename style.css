@@ -328,11 +328,17 @@ span.psw {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     padding-top: 10px;
 }
+.mheading{
+  margin-top: 3%;
+  font-family: "roboto" ,sans-serif;
+  font-weight: bold;
+  color: rgb(252, 164, 4);
+}
 
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 4% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    margin: 2% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
     width: 30%; /* Could be more or less, depending on screen size */
 }
