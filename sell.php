@@ -2,7 +2,13 @@
 <?php
 
 session_start();
+
+
 if (isset($_SESSION['susername'])){
+
+if ($_SESSION['susername']=="elptiya" && $_SESSION['spassword']=="asd"){
+
+
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +25,7 @@ if (isset($_SESSION['susername'])){
   <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+
 
 
 </head>
@@ -217,7 +224,13 @@ if (isset($_SESSION['susername'])){
 
 else {
   ?>
+
+
   <div id="memberModal" class="modal" >
+
+  <div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true">
+
+
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -246,7 +259,10 @@ $(document).ready(function () {
 });
 function relocate_home()
 {
+
 location.href = 'index.php';
+
+
 }
 </script>";
 // header("location:index.php");
