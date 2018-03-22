@@ -9,15 +9,21 @@ margin: 50px;
 }
 
 .left-side{
-box-shadow: 0px 2px 8px 2px white;
-height: 655px;
+/* box-shadow: 0px 2px 8px 2px white; */
+height: 653px;
 border-radius: 4px;
+border: 2px solid white;
+}
+
+.left-side h3{
+  margin-top: 20px;
+  color: white;
 }
 li.list-group-item img{
     width: 100px;
     height: auto;
-    
-    
+
+
 }
 .list-group-item a{
 float: right;
@@ -27,7 +33,7 @@ text-align: left;
 
 .description p{
     color: gray;
-    
+
 }
 .description{
     float: right;
@@ -36,7 +42,7 @@ margin-right    : 450px;
 
 .list-group-ite{
     height: 680px;
-   overflow: auto; 
+   overflow: auto;
 }
 
 footer{
@@ -47,13 +53,13 @@ footer{
     .foot{
     text-decoration: none;
     list-style:none;
-    
+
     float: left;
     }
     .foot li a{
       color: white;
       text-decoration: none;
-    
+
     }
     .foot li:hover{
       color: white;
@@ -74,4 +80,10 @@ footer{
     }
     .poto{
       margin-left: 50%;
+    }
+    #myList{
+    height: 590px;
+    overflow-y: scroll;
+    border: 2px solid white;
+    border-radius: 2px;
     }

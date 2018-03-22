@@ -1,26 +1,43 @@
 <?php require_once('ums/inc/connection.php') ?>
 
+
+<?php
+$querys = "SELECT * FROM signup WHERE email='asd@gmail.com'";
+$result_set = mysqli_query($connction,$querys);
+$record = mysqli_fetch_assoc($result_set);
+
+  // $row=$result_set->fetch_array(MYSQLI_ASSOC);
+
+  $name = $record['name'];
+  $email = $record['email'];
+  $telephone = $record['telephone'];
+  $district = $record['district'];
+  $city = $record['city'];
+
+
+ ?>
+
 <?php
 
- if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
 print_r($_POST);
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$telephone = $_POST['telephone'];
-$district = $_POST['district'];
-$city = $_POST['city'];
+// $name = $_POST['name'];
+// $email = $_POST['email'];
+// $telephone = $_POST['telephone'];
+// $district = $_POST['district'];
+// $city = $_POST['city'];
 $password = $_POST['password'];
 
 
-$query = "INSERT INTO signup(name,email,telephone,district,city,password)VALUES('{$name}','{$email}',{$telephone},'{$district}','{$city}','{$password}')";
-$result = mysqli_query($connction,$query);
+$queryu = "UPDATE signup SET password='password' WHERE email='asd@gmail.com'";
+$resultu = mysqli_query($connction,$queryu);
 
-if ($result) {
-  echo "1 record added";
+if ($resultu) {
+  echo "updated";
 
 }else {
-  echo "database query failed.";
+  echo "not updated";
 }
 
 
@@ -36,7 +53,7 @@ if ($result) {
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Signup page</title>
+    <title>Reset your password</title>
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="js/bootstrap.min.js">
@@ -63,43 +80,17 @@ if ($result) {
       <div class="hero">
       <h3 class="text-center">Lets join with us...</h3><br>
       </div>
-    <form class="" action="ums/insert-sign.php" method="post">
-      <input type="text" name="name" placeholder="Name" class="form-control" required><br>
-      <input type="email" name="email" placeholder="Email" class="form-control" required><br>
-      <input type="text" name="telephone" maxlength="9" pattern="^[_0-9]{1,}$" placeholder="(+94)Telephone Number" class="form-control" required><br>
+    <form class="" action="ums/update-pass.php" method="post">
+      <input type="text" name="name" value=<?php echo $name; ?> class="form-control" disabled><br>
+      <input type="email" name="email" value=<?php echo $email; ?> class="form-control" disabled><br>
+      <input type="text" name="telephone" maxlength="9" pattern="^[_0-9]{1,}$" value=<?php echo $telephone; ?> class="form-control" disabled><br>
       <div class="form-group">
       <label style="color:white;" for="sel1">Select your location (District)</label>
-      <select class="form-control" name="district" id="sel1">
-        <option>Colombo</option>
-        <option>Gampaha</option>
-        <option>Kaluthara</option>
-        <option>Galle</option>
-        <option>Matara</option>
-        <option>Hambanthota</option>
-        <option>Kegalle</option>
-        <option>Rathnapura</option>
-        <option>Badulla</option>
-        <option>Bandarawela</option>
-        <option>Trinkomalee</option>
-        <option>Batticaloa</option>
-        <option>Ampara</option>
-        <option>Kandy</option>
-        <option>Nuwara Eliya</option>
-        <option>Matale</option>
-        <option>Puththalama</option>
-        <option>Kurunegala</option>
-        <option>Anuradhapura</option>
-        <option>Polonnaruwa</option>
-        <option>Mannar</option>
-        <option>Vavniya</option>
-        <option>Mullative</option>
-        <option>Kilinochchi</option>
-        <option>Jaffna</option>
-      </select>
+      <input type="text" name="district" value=<?php echo $district; ?> class="form-control" disabled><br>
       </div>
-      <input type="text" name="city" placeholder="City" class="form-control" required><br>
-      <input class="form-control" id="password" type="password" name="password" value="" required><br>
-      <input class="form-control"  id="cpassword" type="password" name="cpassword" value=""><br>
+      <input type="text" name="city" value=<?php echo $city; ?> class="form-control" disabled><br>
+      <input class="form-control" id="password" type="password" name="password" value="" placeholder="New password" required><br>
+      <input class="form-control"  id="cpassword" type="password" name="cpassword" value="" placeholder="Confirm password"><br>
 <input type="submit" class="btn btn-warning btn-block" style="" name="" value="submit">
     </form>
 

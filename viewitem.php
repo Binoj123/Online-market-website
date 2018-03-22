@@ -40,7 +40,9 @@ $result_set = mysqli_query($connction,$query);
 <div class="container">
     <div class="row">
     <div class="col-lg-3 col-md-3">
-    <div class="container-fluid left-side"></div>
+    <div class="container-fluid left-side">
+      <h3 class="text-center">Choose as you whish</h3>
+    </div>
     </div>
     <div class="col-lg-9 col-md-9 all">
       <input type="text" id="myInput" class="form-control" placeholder="What are you looking for buy?"><br>
@@ -53,7 +55,8 @@ $result_set = mysqli_query($connction,$query);
            $row=$result_set->fetch_array(MYSQLI_ASSOC);
            $result_set->data_seek($i);
            $nameofsell=$row['nameofsell'];
-           $path="photos/".$row['path'];
+           $path=$row['path'];
+           // echo $path;
            $id=$row['id'];
 
         echo<<<_END

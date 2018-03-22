@@ -1,8 +1,20 @@
-
+<?php require_once('ums/inc/connection.php') ?>
 <?php
 
 session_start();
 if (isset($_SESSION['susername'])){
+  $user = $_SESSION['susername'];
+  $querys = "SELECT * FROM signup WHERE email='$user'";
+  $result_set = mysqli_query($connction,$querys);
+  $record = mysqli_fetch_assoc($result_set);
+
+    // $row=$result_set->fetch_array(MYSQLI_ASSOC);
+
+    $name = $record['name'];
+    $email = $record['email'];
+    $telephone = $record['telephone'];
+    $district = $record['district'];
+    $city = $record['city'];
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +22,7 @@ if (isset($_SESSION['susername'])){
 <head>
   <meta charset="utf-8">
   <title>Selling your items</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="js/bootstrap.min.js">
@@ -20,6 +32,9 @@ if (isset($_SESSION['susername'])){
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript" language="javascript"></script>
+<script src="path/to/your/jquery.MultiFile.js" type="text/javascript" language="javascript"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 </head>
   <body>
@@ -39,40 +54,41 @@ if (isset($_SESSION['susername'])){
   <div class="row">
 <div class="col-lg-4 smalll">
 <p>Persenal details</p>
-<input type="text" name="uname" placeholder="Name" class="form-control"><br>
-<input type="email" name="email" placeholder="Email" class="form-control"><br>
-<input type="text" name="phone" placeholder="Telephone Number" class="form-control" ><br>
+<input type="text" name="uname" value=<?php echo $name; ?> placeholder="Name" class="form-control" required><br>
+<input type="email" name="email" value=<?php echo $email; ?> placeholder="email" class="form-control" required><br>
+<input type="text" name="phone" maxlength="9" pattern="^[_0-9]{1,}$" placeholder="(+94)Telephone Number"value=<?php echo $telephone; ?> class="form-control" required><br>
 <div class="form-group">
-<label for="sel1">Select your location (District)</label>
-<select class="form-control" name="location" id="sel1">
-  <option>Colombo</option>
-  <option>Gampaha</option>
-  <option>Kaluthara</option>
-  <option>Galle</option>
-  <option>Matara</option>
-  <option>Hambanthota</option>
-  <option>Kegalle</option>
-  <option>Rathnapura</option>
-  <option>Badulla</option>
-  <option>Bandarawela</option>
-  <option>Trinkomalee</option>
-  <option>Batticaloa</option>
-  <option>Ampara</option>
-  <option>Kandy</option>
-  <option>Nuwara Eliya</option>
-  <option>Matale</option>
-  <option>Puththalama</option>
-  <option>Kurunegala</option>
-  <option>Anuradhapura</option>
-  <option>Polonnaruwa</option>
-  <option>Mannar</option>
-  <option>Vavniya</option>
-  <option>Mullative</option>
-  <option>Kilinochchi</option>
-  <option>Jaffna</option>
-</select>
+<label for="sel1">Your location (District)</label>
+<select class="form-control" name="district" id="sel1">
+  <option <?php if($district == 'Colombo') echo"selected"; ?>>Colombo</option>
+  <option <?php if($district == 'Gampaha') echo"selected"; ?>>Gampaha</option>
+  <option <?php if($district == 'Kaluthara') echo"selected"; ?>>Kaluthara</option>
+  <option <?php if($district == 'Kaluthara') echo"selected"; ?>>Galle</option>
+  <option <?php if($district == 'Galle') echo"selected"; ?>>Matara</option>
+  <option <?php if($district == 'Hambanthota') echo"selected"; ?>>Hambanthota</option>
+  <option <?php if($district == 'Kegalle') echo"selected"; ?>>Kegalle</option>
+  <option <?php if($district == 'Rathnapura') echo"selected"; ?>>Rathnapura</option>
+  <option <?php if($district == 'Badulla') echo"selected"; ?>>Badulla</option>
+  <option <?php if($district == 'Bandarawela') echo"selected"; ?>>Bandarawela</option>
+  <option <?php if($district == 'Trinkomalee') echo"selected"; ?>>Trinkomalee</option>
+  <option <?php if($district == 'Batticaloa') echo"selected"; ?>>Batticaloa</option>
+  <option <?php if($district == 'Ampara') echo"selected"; ?>>Ampara</option>
+  <option <?php if($district == 'Kandy') echo"selected"; ?>>Kandy</option>
+  <option <?php if($district == 'Nuwara Eliya') echo"selected"; ?>>Nuwara Eliya</option>
+  <option <?php if($district == 'Matale') echo"selected"; ?>>Matale</option>
+  <option <?php if($district == 'Puththalama') echo"selected"; ?>>Puththalama</option>
+  <option <?php if($district == 'Kurunegala') echo"selected"; ?>>Kurunegala</option>
+  <option <?php if($district == 'Anuradhapura') echo"selected"; ?>>Anuradhapura</option>
+  <option <?php if($district == 'Polonnaruwa') echo"selected"; ?>>Polonnaruwa</option>
+  <option <?php if($district == 'Mannar') echo"selected"; ?>>Mannar</option>
+  <option <?php if($district == 'Vavniya') echo"selected"; ?>>Vavniya</option>
+  <option <?php if($district == 'Mullative') echo"selected"; ?>>Mullative</option>
+  <option <?php if($district == 'Kilinochchi') echo"selected"; ?>>Kilinochchi</option>
+  <option <?php if($district == 'Jaffna') echo"selected"; ?>>Jaffna</option>
+</select><br>
 </div>
-<input type="text" name="city" placeholder="City" class="form-control"><br>
+
+<input type="text" name="city" value=<?php echo $city; ?> placeholder="City" class="form-control" required><br>
 </div>
 <div class="col-lg-1">
 
@@ -80,7 +96,7 @@ if (isset($_SESSION['susername'])){
 <div class="col-lg-7 large">
 <p>Selling item details</p>
 <div class="container">
-<input type="text" name="nameofsell" placeholder="Name of selling item" class="form-control"><br>
+<input type="text" name="nameofsell" placeholder="Name of selling item" class="form-control" required><br>
 <div class="form-group">
 <label for="sel2">Catagory</label>
 <select class="form-control" name="catagory" id="sel2">
@@ -103,7 +119,7 @@ if (isset($_SESSION['susername'])){
 <div class="row">
   <div class="col-lg-6">
     <label>Price(.00)</label><br>
-  <input type="text" name="price" placeholder="Price (Rs)" class="form-control"><br>
+  <input type="text" name="price" maxlength="15" pattern="^[_0-9]{1,}$" placeholder="Price x (Rs.x.00)" class="form-control" required><br>
   </div>
   <div class="col-lg-6">
     <div class="form-group">
@@ -119,14 +135,14 @@ if (isset($_SESSION['susername'])){
 <div class="row">
   <div class="col-lg-6">
     <div class="des">
-      <textarea name="doi" class="form-control" rows="12" placeholder="Description of Item"></textarea>
+      <textarea name="doi" class="form-control" rows="12" placeholder="Description of Item" required></textarea>
       <br>
     </div>
   </div>
   <div class="col-lg-6">
 
     <input name="fileupload" id="fileupload" type="file"  />
-    <hr />
+    <hr/>
     <div id="dvPreview">
     </div>
 

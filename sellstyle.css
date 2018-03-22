@@ -35,11 +35,12 @@ color: white;
 .smalll{
   border: 2px solid white;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 .large{
   border: 2px solid white;
   border-radius: 10px;
-  
+  margin-bottom: 20px;
 }
 footer{
   margin-top: 100px;
@@ -92,4 +93,3 @@ padding-bottom: 20px;
   margin-top: 50px;
 
 }
-

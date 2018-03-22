@@ -1,11 +1,11 @@
 <?php require_once('inc/connection.php') ?>
 <?php
-print_r($_POST);
+// print_r($_POST);
 
 $uname = $_POST['uname'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
-$location = $_POST['location'];
+$location = $_POST['district'];
 $city = $_POST['city'];
 $nameofsell = $_POST['nameofsell'];
 $catagory = $_POST['catagory'];
@@ -22,14 +22,14 @@ $query = "INSERT INTO sell_item(uname,email,phone,location,city,nameofsell,catag
 
 $result = mysqli_query($connction,$query);
 if ($result) {
-  echo "1 record added";
+  // echo "1 record added";
     if (move_uploaded_file($_FILES['fileupload']['tmp_name'], $target_path)) {
-      echo "succesfullty added";
+      // echo "succesfullty added";
     }else {
-        echo "<br> Error: " . $query."<br>". $connction->error;
+        // echo "<br> Error: " . $query."<br>". $connction->error;
     }
 }else {
-  echo "database query failed.";
+  // echo "database query failed.";
 }
 
 
@@ -84,7 +84,7 @@ if ($result) {
   });
   function relocate_home()
 {
-     location.href = "../index.html";
+     location.href = "../index.php";
 }
    </script>
 
