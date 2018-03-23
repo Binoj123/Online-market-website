@@ -1,11 +1,11 @@
 <?php require_once('inc/connection.php') ?>
 <?php
-print_r($_POST);
+// print_r($_POST);
 
 $uname = $_POST['uname'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
-$location = $_POST['location'];
+$location = $_POST['district'];
 $city = $_POST['city'];
 $nameofsell = $_POST['nameofsell'];
 $catagory = $_POST['catagory'];
@@ -13,23 +13,28 @@ $price = $_POST['price'];
 $conditionofitem =$_POST['conditionofitem'];
 $doi =$_POST['doi'];
 
+//date and time
+date_default_timezone_set("Asia/Colombo");
+$start_date = new DateTime();
+ echo $start_date->format('Y-m-d H:i:s');
+
 $target_dir = "photos/";
 $target_path = $target_dir . basename( $_FILES['fileupload']['name']);
 move_uploaded_file($_FILES['fileupload']['tmp_name'], $target_path);
 
 
-$query = "INSERT INTO sell_item(uname,email,phone,location,city,nameofsell,catagory,price,conditionofitem,doi,`path`)VALUES('{$uname}','{$email}',{$phone},'{$location}','{$city}','{$nameofsell}','{$catagory}',{$price},'{$conditionofitem}','{$doi}','$target_path')";
+$query = "INSERT INTO sell_item(uname,email,phone,location,city,nameofsell,catagory,price,conditionofitem,doi,`path`,`date`)VALUES('{$uname}','{$email}',{$phone},'{$location}','{$city}','{$nameofsell}','{$catagory}',{$price},'{$conditionofitem}','{$doi}','$target_path',now())";
 
 $result = mysqli_query($connction,$query);
 if ($result) {
-  echo "1 record added";
+  // echo "1 record added";
     if (move_uploaded_file($_FILES['fileupload']['tmp_name'], $target_path)) {
-      echo "succesfullty added";
+      // echo "succesfullty added";
     }else {
-        echo "<br> Error: " . $query."<br>". $connction->error;
+        // echo "<br> Error: " . $query."<br>". $connction->error;
     }
 }else {
-  echo "database query failed.";
+  // echo "database query failed.";
 }
 
 
@@ -84,7 +89,7 @@ if ($result) {
   });
   function relocate_home()
 {
-     location.href = "../index.html";
+     location.href = "../index.php";
 }
    </script>
 

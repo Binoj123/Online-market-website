@@ -3,41 +3,55 @@ background-color: #333333;
 }
 
 header img{
-width: 30%;
+width: 25%;
 height: auto ;
-margin: 50px;
+margin: 40px;
 }
 
 .left-side{
-box-shadow: 0px 2px 8px 2px white;
-height: 655px;
+/* box-shadow: 0px 2px 8px 2px white; */
+height: 662px;
 border-radius: 4px;
+border: 2px solid white;
+}
+
+.left-side h3{
+  margin-top: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+.left-side p{
+  color: white;
+  margin-top: 10px;
+}
+.left-side label{
+  color: white;
 }
 li.list-group-item img{
-    width: 100px;
+    width: 110px;
     height: auto;
-    
-    
+
+
 }
 .list-group-item a{
-float: right;
-margin-right    : 400px;
-text-align: left;
+/* float: right; */
+/* margin-right    : 400px; */
+/* text-align: left; */
 }
 
 .description p{
     color: gray;
-    
+
 }
 .description{
-    float: right;
-margin-right    : 450px;
+    /* float: right; */
+/* margin-right    : 450px; */
 }
 
-.list-group-ite{
+/* .list-group-ite{
     height: 680px;
-   overflow: auto; 
-}
+   overflow: auto;
+} */
 
 footer{
     background-color: #424242;
@@ -47,13 +61,13 @@ footer{
     .foot{
     text-decoration: none;
     list-style:none;
-    
+
     float: left;
     }
     .foot li a{
       color: white;
       text-decoration: none;
-    
+
     }
     .foot li:hover{
       color: white;
@@ -74,4 +88,10 @@ footer{
     }
     .poto{
       margin-left: 50%;
+    }
+    #myList{
+    height: 602px;
+    overflow-y: scroll;
+    border: 2px solid white;
+    border-radius: 2px;
     }

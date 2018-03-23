@@ -12,9 +12,9 @@ body{
 }
 
 .logo img{
-  height: 100px;
+  height: 70px;
   float: left;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-left: 20px;
 }
 .details{

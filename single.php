@@ -4,7 +4,7 @@
 <?php
 $id=$_POST['id'];
  $query = "SELECT * FROM  `sell_item` WHERE `id`='$id' ";
-echo "".$_POST['id'];
+// echo "".$_POST['id'];
 $result_set = mysqli_query($connction,$query);
  $record = mysqli_fetch_assoc($result_set);
 
@@ -31,36 +31,46 @@ $result_set = mysqli_query($connction,$query);
 </head>
 <body>
   <header>
-      <div class="text-center"><img src="images/logo3.png" alt="logo"></div>
+      <div class="text-center"><img src="images/logo3.png" alt="logo" style="margin:20px; width:300px; height:auto;"></div>
 </header>
 
-<section>
+<section >
   <div class="container main">
-      <h2><?php echo $record['nameofsell'];?></h2>
+    <div class="heading">
+        <h2 style="font-size:48px; color:rgb(254, 137, 0); padding-top:20px;"><?php echo $record['nameofsell'];?></h2>
+    </div>
+
 <div class="row upper">
 
-<div class="col-lg-4">
+<div class="col-md-4 image-con">
   <h4>Photo</h4>
-  <img src="<?php echo $record['path']; ?>" alt="item-image">
+  <img src="<?php echo $record['path']; ?>" alt="item-image" style="height:373px; border-radius:2px;">
 </div>
 <div class="col-lg-8">
-    <h4>Description</h4>
-  <textarea style="padding:20px;"name="description" rows="13" cols="80"><?php echo $record['doi'];?></textarea>
+    <h4>Description</h4><hr>
+  <textarea style="padding:20px;"name="description" rows="12" cols="80"><?php echo $record['doi'];?></textarea>
 </div>
 </div>
 <div class="row middle">
-<div class="col-md-6">
-  <h4><li class="fa fa-map-marker"></li>   Location</h4><br>
-  <p><?php echo $record['location'];?></p><br>
+<div class="col-md-4">
+  <h4 style="color:rgb(0, 177, 97);"><li class="fa fa-map-marker"></li>   Location</h4> <hr> <br>
 
-  <h4><li class="fa fa-address-card"></li>   Contact Details</h4><br>
-  <p>Seller Name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:<b> <?php echo $record['uname'];?></b></p>
-  <p>Seller Contact Number &nbsp:<b> <?php echo $record['phone'];?></b></p>
-  <p>Seller Email Address &nbsp&nbsp&nbsp&nbsp: <b><?php echo $record['city'];?></b></p><br>
+  <p style="color:rgb(254, 137, 0);"><?php echo $record['city'];?>,&nbsp<?php echo $record['location'];?></p><br>
+
+  <h4 style="color:rgb(0, 155, 254);"><li class="fa fa-address-card"></li>   Contact Details</h4>
+  <hr>
+  <br>
+
+  <div class="seller" style="color:rgb(215, 91, 12);">
+    <p>Seller Name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:<b> <?php echo $record['uname'];?></b></p>
+    <p>Seller Contact Number &nbsp:<b> <?php echo $record['phone'];?></b></p>
+    <p>Seller Email Address &nbsp&nbsp&nbsp&nbsp: <b><?php echo $record['city'];?></b></p><br>
+  </div>
+
 </div>
-<div class="col-md-6 pricer">
+<div class="col-md-8 pricer">
   <h4><li class="fa fa-dollar"></li>   Price</h4><br>
-  <p style="border-radius:5px; padding-left:10px; font-size:50px; background-color:rgb(78, 249, 237);">Rs. <?php echo $record['price'];?>.00</p><br>
+  <p style="border-radius:5px; padding-left:10px; font-size:50px; background-color:rgba(251, 115, 4, .80); margin-right:48px;">Rs. <?php echo $record['price'];?>.00</p><br>
 </div>
 </div>
 </div>
