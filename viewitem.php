@@ -44,10 +44,10 @@ $result_set = mysqli_query($connction,$query);
       <h3 class="text-center">Choose as you whish</h3>
       <p class="text-center"><u>Filter by</u></p><br>
       <label>Location</label><br>
-      <select class="form-control" name="district" id="sel1">
+      <select class="form-control" name="district" id="mySelect" onchange="myFunction()">
         <option selected>All</option>
-        <option>Colombo</option>
-        <option>Gampaha</option>
+        <option value="Colombo">Colombo</option>
+        <option value="gampaha">Gampaha</option>
         <option>Kaluthara</option>
         <option>Galle</option>
         <option>Matara</option>
@@ -93,7 +93,7 @@ $result_set = mysqli_query($connction,$query);
            date_default_timezone_set("Asia/Colombo");
            $start_date = new DateTime();
            $since_start = $start_date->diff(new DateTime($date));
-      
+
            // echo "</br>" .$since_start->days.' days total<br>';
            // echo $path;
            $id=$row['id'];
@@ -208,12 +208,19 @@ $(document).ready(function(){
 
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
+    var value_of_dropdown  = $(this).find('select[id="#myselect"]').val();
     $("#myList li").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
-});
 
+});
+// function myFunction() {
+//     var x = document.getElementById("mySelect").value;
+//     $("#myList li").filter(function() {
+//       $(this).toggle($(this).text().toLowerCase().indexOf(x) > -1)
+// }
+// }
 
 </script>
 
