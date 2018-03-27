@@ -75,28 +75,28 @@
       </div>
     </header>
   <selection class="features">
-<h3 class="text-center">GET GOODS FAST NOT THE FAST GOOD</h3>
-<p class="copy">This is my first online webstore you will able to buy any goods from here and also meet customers and sellers at one place.  </p>
+<h3 class="text-center">ABOUT PATAS.LK</h3>
+<p class="copy">Patas.lk is a online webstore that you will able to buy any goods from here and also meet customers and sellers at one place.</p>
 <div class="container">
   <div class="row">
     <div class="col-sm-3">
         <li class="fa fa-users"></li>
-      <h4>Have Healthy goods</h4>
-    <p class="arranging">This is my first online webstore you will able to buy any goods from here and also meet customers and sellers.  </p>
+      <h4 class="text-center">100% Free Delivary</h4><br>
+    <p class="arranging">We charge you only for the goods that you buy.No shipment costs or any other additioal payments.</p>
 </div>
 <div class="col-sm-3">
   <li class="fa fa-certificate"></li>
-    <h4>Have Healthy goods</h4>
-<p class="arranging">This is my first online webstore you will able to buy any goods from here and also meet customers and sellers.  </p>
+    <h4 class="text-center">Super fast delivary speed</h4>
+<p class="arranging">Our super fast delivary system speed won't let you wait for your goods.</p>
 </div>
 <div class="col-sm-3">
   <li class="fa fa-envelope"></li>
-    <h4>Have Healthy goods</h4>
-<p class="arranging">This is my first online webstore you will able to buy any goods from here and also meet customers.  </p>
+    <h4 class="text-center">Get exact you orderd</h4>
+<p class="arranging">We give you exactly what it's shown on the web.You can count on us for quality and integrity.</p>
 </div>
 <div class="col-sm-3">
   <li class="fa fa-shopping-basket"></li>
-    <h4>Have Healthy goods</h4>
+    <h4 class="text-center">Don't like? Just exchange it</h4>
 <p class="arranging">This is my first online webstore you will able to buy any goods from here and also meet customers and sellers.  </p>
 </div>
   </div>
@@ -148,7 +148,7 @@
 
   </section>
   <section class="mobile">
-    <h3 class="text-center">HOW IT WORK AS IMPLE 1,2,3</h3>
+    <h3 class="text-center">HOW IT WORKS A SIMPLE 1,2,3</h3>
     <div class="container">
   <div class="row">
 <div class="col-md-6">
@@ -159,16 +159,13 @@
 <div class="col-md-6">
 <div class="work-step">
 <div>1</div>
-<p>This is gonna be right dession that i have to take before it as usual we dont have such matter
-This is gonna be right dession that i have to take before it as usual we dont have such matter</p>
+<p>Create an account with your email and credit card details and shipping details.</p>
 <div>2</div>
-<p>This is gonna be right dession that i have to take before it as usual we dont have such matter
-This is gonna be right dession that i have to take before it as usual we dont have such matter</p>
+<p>Pick up your goods,add them to your cart and confirm your purchase.</p>
 <div>3</div>
-<p>This is gonna be right dession that i have to take before it as usual we dont have such matter
-This is gonna be right dession that i have to take before it as usual we dont have such matter</p>
-<a href="#"><img src="images/img2.png" alt="image2"></a>
-<a href="#"><img src="images/img3.png" alt="image2"></a>
+<p>Take your goods which we bring to your door step!</p>
+<a href="https://www.apple.com/lae/ios/app-store/"><img src="images/img2.png" alt="image2"></a>
+<a href="https://play.google.com/store?hl=en"><img src="images/img3.png" alt="image2"></a>
 </div>
 </div>
   </div>
@@ -259,7 +256,7 @@ who is such man that like him or her netherless to do main got he war
   </section>
   <section class="form">
     <div class="container">
-<h3 class="text-center">WE WILL HAPPY TO HEAR FORM YOU</h3>
+<h3 class="text-center">WE WILL HAPPY TO HEAR YOU</h3>
 <div class="row gap">
   <div class="col-md-4">
     <input type="text" name="user" placeholder="Username" class="form-control"><br>
@@ -267,7 +264,7 @@ who is such man that like him or her netherless to do main got he war
 <input type="password" name="password" placeholder="Password" class="form-control">
   </div>
   <div class="col-md-8">
-    <textarea class="form-control" rows="8" placeholder="Comments"></textarea>
+    <textarea class="form-control" rows="8" placeholder="Comments or Feedback about patas.lk"></textarea>
 <button class="btn btn-warning btn-block">Submit</button>
   </div>
 
