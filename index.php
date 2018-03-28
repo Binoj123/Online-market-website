@@ -24,7 +24,7 @@
           <ul class="mainnav">
             <li><a href="#login" onclick="document.getElementById('id01').style.display='block'">LOGIN</a></li>
             <li><a href="signup.php" onclick="document.getElementById('id02').style.display='block'">SIGN UP</a></li>
-            <li><a href="">CATOGORY</a></li>
+            <li><a href="catagory.php">CATOGORY</a></li>
             <li><a href="">ABOUT US</a></li>
             <li><a href="">SERVICE</a></li>
           </ul>
