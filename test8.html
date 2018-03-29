@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<select class="location" name="location" id="myloc">
+  <option value="galle">Galle</option>
+  <option value="colombi">colombi</option>
+  <option value="kaluthra">kaluthra</option>
+  <option value="matara">matara</option>
+</select>
+  <ul id="myUL">
+    <li><a href="#">Adele</a></li>
+    <li><a href="#">Agnes</a></li>
+
+    <li><a href="#">Billy</a></li>
+    <li><a href="#">Bob</a></li>
+
+    <li><a href="#">Calvin</a></li>
+    <li><a href="#">Christina</a>
+      <p>hello</p>
+<br>
+    </li>
+    <li> <p>hello</p>  </li>
+  </ul>
+
+    </form>
+    <script type="text/javascript">
+    function myFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+
+            }
+        }
+    }
+    </script>
+  </body>
+</html>

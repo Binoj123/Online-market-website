@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form>
+  <div class="answer1wrap">
+    <select id="mySelect">
+      <option value="void">Choose your answer</option>
+      <option value="To measure time">To measure time</option>
+      <option value="To measure distance">To measure distance</option>
+      <option value="To measure volume">To measure volume</option>
+    </select>
+  </div>
+</form>
+<button class="btn btn-default" id="checkbtn" onclick="answers();" type="button"><span    class="glyphicon glyphicon-check"></span> Check answers</button>
+<script type="text/javascript">
+function answers() {
+
+var select = document.getElementById("mySelect");
+var answer = select.options[select.selectedIndex].value;
+
+    if(answer == "To measure time"){
+        alert("Thats correct");
+    }
+
+}</script>
+  </body>
+</html>

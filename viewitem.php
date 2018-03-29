@@ -6,7 +6,8 @@ $query = "SELECT * FROM sell_item";
 $result_set = mysqli_query($connction,$query);
 
  $record = mysqli_fetch_assoc($result_set);
-
+ $catagory=$_POST['catagory'];
+ echo $catagory;
 
   ?>
 
@@ -89,6 +90,7 @@ $result_set = mysqli_query($connction,$query);
            $price=$row['price'];
            $location=$row['location'];
            $date=$row['date'];
+
            // echo $date;
            date_default_timezone_set("Asia/Colombo");
            $start_date = new DateTime();

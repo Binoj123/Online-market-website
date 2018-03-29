@@ -9,7 +9,7 @@ if (isset($_SESSION['susername'])){
   $record = mysqli_fetch_assoc($result_set);
 
     // $row=$result_set->fetch_array(MYSQLI_ASSOC);
-  
+
 
     $name = $record['name'];
     $email = $record['email'];
@@ -105,10 +105,11 @@ if (isset($_SESSION['susername'])){
 <option>Cars & Vehicles</option>
 <option>Property</option>
 <option>Jobs</option>
+<option>Music & Instruments</option>
 <option>Work Overseas</option>
 <option>Home & garden</option>
 <option>Fasion, healthy & beauty</option>
-<option> Hobby,Sport & Kids</option>
+<option>Hobby,Sport & Kids</option>
 <option>Business & industry</option>
 <option>Services</option>
 <option>Education</option>
