@@ -24,7 +24,7 @@ submbody{
 header{
 background-image: linear-gradient(rgba(0,0,0,.7),rgba(0, 0, 0, 0.5)),url(images/on.png);
 height: 100vh;
-width: 100vw;
+width: 98.9vw;
 background-position: center;
 background-size: cover;
 background-attachment: fixed;
@@ -37,7 +37,7 @@ color: white;
   list-style: none;
   float: right;
   margin-top: 20px;
-  margin-left: 450px;
+  margin-left: 550px;
 
 }
 .mainnav li{
@@ -46,10 +46,24 @@ margin-left: 20px;
 }
 .mainnav li a:hover{
 color: #e67e22;
+/* border-bottom: 2px solid #e67e22; */
+transition: all .5s ease-in;
+padding: 15px 0px;
+
+}
+
+.mainnav li button:hover{
+color: #e67e22;
 border-bottom: 2px solid #e67e22;
 transition: all .5s ease-in;
 padding: 15px 0px;
 
+}
+.mainnav li button{
+  color: white;
+  text-decoration: none;
+  font-size: 90%;
+  font-weight: bold;
 }
 .mainnav li a{
   color: white;
@@ -98,7 +112,7 @@ h3:after{
   margin-top: 30px;
 }
 .features h3{
-  margin-top: 80px;
+  margin-top: 60px;
   margin-bottom: 30px;
 }
 .arranging{
@@ -109,17 +123,16 @@ font-size: 40px;
 color: #e67e22;
 margin-left: 40%;
 }
-.features h4{
-  margin-left: 29px;
-}
+
 .meal-showcase{
   list-style: none;
-  width: 100%;
+  width: 97.5%;
+  /* margin-right: 20%; */
 }
 .meal-showcase li{
   display: block;
   width: 25%;
-  float: left;
+    float: left;
 }
 .meal-photo{
   width: 100%;
@@ -136,7 +149,7 @@ margin-left: 40%;
   transform: scale(1.05);
 }
 .meal{
- margin-top: 60px;
+ margin-top: 0;
 }
 .pic img{
 margin-left: 20%;
@@ -162,6 +175,7 @@ line-height: 50px;
 }
 .clearfix{
   zoom:1;
+  margin-top: -2%;
 }
 .clearfix:after{
   visibility: hidden;
@@ -187,10 +201,10 @@ margin-top: 100px;
   color: #e47e22;
 }
 .testimonials{
-  margin-top: 80px;
+  margin-top: 60px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(images/customer.jpg);
   padding-top: 80px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   color: white;
   background-attachment: fixed;
 }
@@ -214,14 +228,25 @@ margin-top: 40px;
   margin-bottom: 80px;
 }
 .gap{
-  margin-top: 40px;
+  margin-top: 30px;
+}
+.right_comment{
+  margin-top: 7px;
+}
+.gap img{
+  height: 70px;
+
+  margin-top: 20px;
+  margin-left: 15%;
 }
 .form{
   margin-top: 40px;
+
 }
 footer{
 background-color: #424242;
 color: white;
+margin-top: -3%;
 }
 .foot{
 text-decoration: none;

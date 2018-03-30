@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+    <script src="js/jquery-3.3.1.min.js"></script>
   </head>
 
   <body>
@@ -33,7 +34,7 @@
         </div>
         <div class="col-md-4">
           <div class="right-corner">
-            <h5><a href="index.php">Back << to Main</a>
+            <h5><a href="index.php">Back to << Home Page</a>
             </h5>
           </div>
 

@@ -52,11 +52,16 @@ if ($result) {
   <body>
     <div class="container-fluid logo">
       <div class="row">
+        <div class="col-md-10">
         <img src="images/logo3.png" alt="logo">
+        </div>
+        <div class="col-md-2">
+       <a href="index.php"><h5>Back to << Home Page  </h5> </a>
+        </div>
       </div>
-      <div class="home">
-      <a href="index.php">Back to >> Home Page</a>
-      </div>
+      <!-- <div class="home">
+
+      </div> -->
 
 </div>
     <div class="container info">

@@ -20,7 +20,8 @@ header{
 }
 .meal-showcase{
   list-style: none;
-  width: 100%;
+  width: 99%;
+  margin-left: -1%;
 }
 .meal-showcase li{
   display: block;
