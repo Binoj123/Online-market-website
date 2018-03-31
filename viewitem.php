@@ -6,8 +6,8 @@ $query = "SELECT * FROM sell_item";
 $result_set = mysqli_query($connction,$query);
 
  $record = mysqli_fetch_assoc($result_set);
- $catagory=$_POST['catagory'];
- echo $catagory;
+ $catagory = $_GET['catagory'];
+
 
   ?>
 
@@ -30,6 +30,7 @@ $result_set = mysqli_query($connction,$query);
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 <header>

@@ -1,4 +1,6 @@
-
+<?php
+$catagory;
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -53,7 +55,10 @@
                 <div class="centerd centerd1">
                   <h4>Electronics</h4>
                 </div>
-                <a href="www.google.lk"><img src="images/electronics.jpg" alt=""></a>
+                <?php
+                $catagory="electronics";
+                 ?>
+                <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/electronics.jpg" alt=""></a>
 
               </figure>
               </li>
@@ -62,7 +67,10 @@
           <div class="centerd centerd2">
             <h4>Cars & Vehicles</h4>
           </div>
-            <a href="www.google.lk"><img src="images/vehicle.jpg" alt=""></a>
+          <?php
+          $catagory="vehicle";
+           ?>
+            <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/vehicle.jpg" alt=""></a>
         </figure>
         </li>
         <li>
@@ -70,7 +78,10 @@
           <div class="centerd centerd3">
             <h4>Property</h4>
           </div>
-          <a href="www.google.lk"><img src="images/property.jpg" alt=""></a>
+          <?php
+          $catagory="property";
+           ?>
+          <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/property.jpg" alt=""></a>
         </figure>
         </li>
         <li>
@@ -78,7 +89,10 @@
           <div class="centerd centerd4">
             <h4>Jobs</h4>
           </div>
-          <a href="www.google.lk"><img src="images/jobs.jpg" alt=""></a>
+          <?php
+          $catagory="jobs";
+           ?>
+          <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/jobs.jpg" alt=""></a>
 
         </figure>
         </li>
@@ -87,7 +101,10 @@
           <div class="centerd centerd5">
             <h4>Music & Instruments</h4>
           </div>
-          <a href="www.google.lk"><img src="images/instrument1.jpg" alt=""></a>
+          <?php
+          $catagory="music";
+           ?>
+          <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/instrument1.jpg" alt=""></a>
         </figure>
         </li>
         <li>
@@ -95,7 +112,10 @@
           <div class="centerd centerd6">
             <h4>Work Overseas</h4>
           </div>
-          <a href="www.google.lk"><img src="images/workseas.jpg" alt=""></a>
+          <?php
+          $catagory="work_overseas";
+           ?>
+          <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/workseas.jpg" alt=""></a>
         </figure>
         </li>
         <li>
@@ -103,7 +123,10 @@
           <div class="centerd centerd7">
             <h4>Home & Garden</h4>
           </div>
-          <a href="www.google.lk"><img src="images/garden.jpg" alt=""></a>
+          <?php
+          $catagory="home_garden";
+           ?>
+          <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/garden.jpg" alt=""></a>
         </figure>
         </li>
         <li>
@@ -111,7 +134,10 @@
           <div class="centerd centerd8">
             <h4>Fasion, Healthy & Beauty</h4>
           </div>
-          <a href="www.google.lk"><img src="images/beauty.jpg" alt=""></a>
+          <?php
+          $catagory="fashion";
+           ?>
+          <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/beauty.jpg" alt=""></a>
         </figure>
         </li>
         <li>
@@ -119,7 +145,10 @@
           <div class="centerd centerd9">
             <h4>Kids items</h4>
           </div>
-          <a href="javascript:DoPost()"><img src="images/baby.jpg" method="post" alt=""></a>
+          <?php
+          $catagory="kids_item";
+           ?>
+          <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/baby.jpg" method="post" alt=""></a>
 
         </figure>
         </li>
@@ -128,7 +157,10 @@
     <div class="centerd centerd10">
       <h4>Services</h4>
     </div>
-      <a href="www.google.lk"><img src="images/service.jpg" alt=""></a>
+    <?php
+    $catagory="service";
+     ?>
+      <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/service.jpg" alt=""></a>
   </figure>
   </li>
   <li>
@@ -136,7 +168,10 @@
     <div class="centerd centerd11">
       <h4>Education</h4>
     </div>
-    <a href="www.google.lk"><img src="images/education.jpg" alt=""></a>
+    <?php
+    $catagory="education";
+     ?>
+    <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/education.jpg" alt=""></a>
   </figure>
   </li>
   <li>
@@ -144,7 +179,10 @@
     <div class="centerd centerd12">
       <h4>Animals</h4>
     </div>
-    <a href="www.google.lk"><img src="images/animal.jpg" alt=""></a>
+    <?php
+    $catagory="animals";
+     ?>
+    <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/animal.jpg" alt=""></a>
 
   </figure>
   </li>
@@ -153,7 +191,10 @@
     <div class="centerd centerd13">
       <h4>Food & Agriculture</h4>
     </div>
-    <a href="www.google.lk"><img src="images/agri.jpg" alt=""></a>
+    <?php
+    $catagory="food";
+     ?>
+    <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/agri.jpg" alt=""></a>
 
   </figure>
   </li>
@@ -162,7 +203,10 @@
     <div class="centerd centerd14">
       <h4>Arts & Handmades</h4>
     </div>
-    <a href="www.google.lk"><img src="images/art.jpg" alt=""></a>
+    <?php
+    $catagory="arts";
+     ?>
+    <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/art.jpg" alt=""></a>
 
   </figure>
   </li>
@@ -171,7 +215,10 @@
     <div class="centerd centerd15">
       <h4>Hobby & Sports</h4>
     </div>
-    <a href="www.google.lk"><img src="images/sport1.jpg" alt=""></a>
+    <?php
+    $catagory="hobby";
+     ?>
+    <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/sport1.jpg" alt=""></a>
 
   </figure>
   </li>
@@ -180,7 +227,10 @@
     <div class="centerd centerd16">
       <h4>Other</h4>
     </div>
-    <a href="www.google.lk"><img src="images/logo1.jpg" alt=""></a>
+    <?php
+    $catagory="other";
+     ?>
+    <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/logo1.jpg" alt=""></a>
 
   </figure>
   </li>
