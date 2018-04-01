@@ -6,7 +6,12 @@ $query = "SELECT * FROM sell_item";
 $result_set = mysqli_query($connction,$query);
 
  $record = mysqli_fetch_assoc($result_set);
- $catagory = $_GET['catagory'];
+ if (isset($_GET['catagory'])) {
+   $catagory = $_GET['catagory'];
+  echo $catagory;
+}else {
+  echo "all";
+}
 
 
   ?>
@@ -47,14 +52,14 @@ $result_set = mysqli_query($connction,$query);
       <p class="text-center"><u>Filter by</u></p><br>
       <label>Location</label><br>
       <select class="form-control" name="district" id="mySelect" onchange="myFunction()">
-        <option selected>All</option>
-        <option value="Colombo">Colombo</option>
+        <option value="all" selected>All</option>
+        <option value="colombo">Colombo</option>
         <option value="gampaha">Gampaha</option>
-        <option>Kaluthara</option>
-        <option>Galle</option>
-        <option>Matara</option>
-        <option>Hambanthota</option>
-        <option>Kegalle</option>
+        <option value="kaluthara">Kaluthara</option>
+        <option value="galle">Galle</option>
+        <option value="mathara">Matara</option>
+        <option value="hambanthota">Hambanthota</option>
+        <option value="kegalle">Kegalle</option>
         <option>Rathnapura</option>
         <option>Badulla</option>
         <option>Bandarawela</option>
@@ -73,7 +78,8 @@ $result_set = mysqli_query($connction,$query);
         <option>Mullative</option>
         <option>Kilinochchi</option>
         <option>Jaffna</option>
-      </select>
+      </select><br>
+      <input type="button" value="Go" class="btn btn-secondary" onClick="window.location.reload()">
     </div>
     </div>
     <div class="col-lg-9 col-md-9 all">
@@ -91,7 +97,7 @@ $result_set = mysqli_query($connction,$query);
            $price=$row['price'];
            $location=$row['location'];
            $date=$row['date'];
-
+           $dbcatagory=$row['catagory'];
            // echo $date;
            date_default_timezone_set("Asia/Colombo");
            $start_date = new DateTime();
@@ -113,6 +119,7 @@ $result_set = mysqli_query($connction,$query);
         </div>
         <div class=col-md-9>
         <h2 style="color:rgb(255, 131, 1);">$nameofsell</h2>
+
         <div class="row">
         <div class=col-md-9>
 
@@ -211,19 +218,26 @@ $(document).ready(function(){
 
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
-    var value_of_dropdown  = $(this).find('select[id="#myselect"]').val();
+    var value_of_dropdown  = $(this).find('select[id="#mySelect"]').val();
     $("#myList li").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
+var x = document.getElementById("mySelect").value;
+$("#myList li").filter(function() {
+  if (x=="all") {
 
+  }else {
+    $(this).toggle($(this).text().toLowerCase().indexOf(x) > -1)
+  }
 });
-// function myFunction() {
-//     var x = document.getElementById("mySelect").value;
-//     $("#myList li").filter(function() {
-//       $(this).toggle($(this).text().toLowerCase().indexOf(x) > -1)
-// }
-// }
+
+// var y = "<?php echo $catagory; ?>";
+// $("#myList li").filter(function() {
+//   $(this).toggle($(this).text().toLowerCase().indexOf(y) > -1)
+// });
+});
+
 
 </script>
 
