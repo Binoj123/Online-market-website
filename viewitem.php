@@ -9,8 +9,13 @@ $result_set = mysqli_query($connction,$query);
  if (isset($_GET['catagory'])) {
    $catagory = $_GET['catagory'];
   echo $catagory;
+//   echo '<script type="text/javascript">',
+//         'myFunction();',
+//      '</script>'
+// ;
 }else {
   echo "all";
+
 }
 
 
@@ -161,6 +166,8 @@ echo<<<_END
         <button type="submit" class="btn btn-primary viewmore">View More</button>
         <input type="hidden" value="$id" name="id">
         </form>
+
+        <p style="color:white;">$dbcatagory</p>
         </div>
         </div>
         </div>
@@ -214,8 +221,9 @@ _END;
 
 
 <script>
-$(document).ready(function(){
 
+$(document).ready(function(){
+// function inputer(){
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
     var value_of_dropdown  = $(this).find('select[id="#mySelect"]').val();
@@ -223,20 +231,41 @@ $(document).ready(function(){
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
-var x = document.getElementById("mySelect").value;
-$("#myList li").filter(function() {
-  if (x=="all") {
+// }
 
-  }else {
-    $(this).toggle($(this).text().toLowerCase().indexOf(x) > -1)
-  }
+  // function combo(){
+    var x = document.getElementById("mySelect").value;
+    $("#myList li").filter(function() {
+      if (x=="all") {
+
+      }else {
+        $(this).toggle($(this).text().toLowerCase().indexOf(x) > -1)
+      }
+    });
+
+  // }
+
 });
 
-// var y = "<?php echo $catagory; ?>";
-// $("#myList li").filter(function() {
-//   $(this).toggle($(this).text().toLowerCase().indexOf(y) > -1)
-// });
+$( window ).load(function() {
+  // function myFunction() {
+     document.write("function works");
+    var y = "?php echo $catagory; ?>";
+    document.write(y);
+    if (y!="all") {
+      $("#myList li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(y) > -1)
+
+       });
+    }
+  // }
 });
+// document.getElementById("#myList li").addEventListener("load", myFunction);
+//
+
+
+
+
 
 
 </script>
