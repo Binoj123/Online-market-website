@@ -68,7 +68,7 @@ $catagory;
             <h4>Cars & Vehicles</h4>
           </div>
           <?php
-          $catagory="vehicles";
+          $catagory="Cars & Vehicles";
            ?>
             <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/vehicle.jpg" alt=""></a>
         </figure>

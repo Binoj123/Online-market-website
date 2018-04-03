@@ -1,5 +1,5 @@
 
-<?php require_once('ums/select-query.php') ?>
+<?php require_once('ums/inc/connection.php') ?>
 <?php $query = "SELECT * FROM sell_item";
 
 $result_set = mysqli_query($connction,$query);

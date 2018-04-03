@@ -1,13 +1,12 @@
 
-<?php require_once('ums/select-query.php') ?>
+<?php require_once('ums/inc/connection.php') ?>
 <?php
-$query = "SELECT * FROM sell_item";
 
-$result_set = mysqli_query($connction,$query);
+  // $record = mysqli_fetch_assoc($result_set);
 
- $record = mysqli_fetch_assoc($result_set);
  if (isset($_GET['catagory'])) {
    $catagory = $_GET['catagory'];
+   $query = "SELECT * FROM sell_item WHERE catagory='$catagory'";
   echo $catagory;
 //   echo '<script type="text/javascript">',
 //         'myFunction();',
@@ -15,10 +14,10 @@ $result_set = mysqli_query($connction,$query);
 // ;
 }else {
   echo "all";
-
+  echo "hi";
+  $query = "SELECT * FROM sell_item";
 }
-
-
+$result_set = mysqli_query($connction,$query);
   ?>
 
 <!DOCTYPE html>
@@ -93,12 +92,11 @@ $result_set = mysqli_query($connction,$query);
 
         <?php
             $rows= $result_set->num_rows;
-         for($i=0;$i<=$rows;$i++){
-
+         for($i=1;$i<=$rows;$i++){
            $row=$result_set->fetch_array(MYSQLI_ASSOC);
            $result_set->data_seek($i);
            $nameofsell=$row['nameofsell'];
-           $path=$row['path'];
+           $path="ums/".$row['path'];
            $price=$row['price'];
            $location=$row['location'];
            $date=$row['date'];
