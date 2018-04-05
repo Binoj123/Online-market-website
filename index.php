@@ -170,6 +170,7 @@
 <p>Hi Customers! Take your goods which seller bring to your door step!</p>
 <a href="https://www.apple.com/lae/ios/app-store/"><img src="images/img2.png" alt="image2"></a>
 <a href="https://play.google.com/store?hl=en"><img src="images/img3.png" alt="image2"></a>
+<a href="signup.php"><img src="images/img4.png" alt="image2"></a>
 </div>
 </div>
   </div>
