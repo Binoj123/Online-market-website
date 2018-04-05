@@ -27,6 +27,7 @@ if (isset($_SESSION['susername'])){
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="js/bootstrap.min.js">
+  <link href="js/bootstrap.min.js">
   <link rel="stylesheet" href="js/bootstrap.bundle.min.js">
   <link rel="stylesheet" href="sellstyle.css" type="text/css">
   <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
