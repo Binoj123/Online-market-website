@@ -1,4 +1,20 @@
+<?php require_once('ums/inc/connection.php') ?>
+<?php
+ if (isset($_POST['submit'])) {
 
+$emailf = $_POST['emailf'];
+$commentf = $_POST['commentf'];
+
+$query = "INSERT INTO feedback(emailf,commentf)VALUES('{$emailf}','{$commentf}')";
+$result = mysqli_query($connction,$query);
+// if ($result) {
+// echo "succesfullty added";
+// }else {
+// echo $connction->error;
+// }
+}
+
+ ?>
 
 
 <!DOCTYPE html>
@@ -8,6 +24,7 @@
     <title>Online Marketplace</title>
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.min.js">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
@@ -264,19 +281,22 @@ who is such man that like him or her netherless to do main got he war
   <section class="form">
     <div class="container">
 <h3 class="text-center">WE WILL HAPPY TO HEAR YOU</h3>
+  <form action="index.php" method="post">
 <div class="row gap">
-  <div class="col-md-4">
-    <input type="text" name="email" placeholder="Email Address" class="form-control">
-    <img src="images/logo3.png" alt="logo">
-    </div>
-<!-- <input type="email" name="email" placeholder="Email" class="form-control"><br>
-<input type="password" name="password" placeholder="Password" class="form-control"> -->
 
-  <div class="col-md-8 right_comment">
-    <textarea class="form-control" rows="8" placeholder="Comments or Feedback about patas.lk"></textarea>
-<button class="btn btn-warning btn-block">Submit</button>
-  </div>
+    <div class="col-md-4">
+      <input type="text" name="emailf" placeholder="Email Address" class="form-control">
+      <img src="images/logo3.png" alt="logo">
+      </div>
+  <!-- <input type="email" name="email" placeholder="Email" class="form-control"><br>
+  <input type="password" name="password" placeholder="Password" class="form-control"> -->
+
+    <div class="col-md-8 right_comment">
+      <textarea name="commentf" class="form-control" rows="8" placeholder="Comments or Feedback about patas.lk" ></textarea>
+  <input type="submit" class="btn btn-warning btn-block" value="Submit" name="submit">
+    </div>
 </div>
+</form>
     </div>
   </section>
 

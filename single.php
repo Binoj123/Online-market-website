@@ -44,7 +44,10 @@ $result_set = mysqli_query($connction,$query);
 
 <div class="col-md-4 image-con">
   <h4>Photo</h4>
-  <img src="<?php echo $record['path']; ?>" alt="item-image" style="height:373px; border-radius:2px;">
+  <div style="background-color:rgba(251, 115, 4, .80); position: relative; width:300px; height:373px;">
+    <img src="<?php echo "ums/".$record['path']; ?>" alt="item-image" style="height:auto; top:0; bottom:0; margin: auto; position: absolute; border-radius:2px;">
+  </div>
+
 </div>
 <div class="col-lg-8">
     <h4>Description</h4><hr>

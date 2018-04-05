@@ -55,36 +55,53 @@ $result_set = mysqli_query($connction,$query);
     <div class="container-fluid left-side">
       <h3 class="text-center">Choose as you whish</h3>
       <p class="text-center"><u>Filter by</u></p><br>
-      <label>Location</label><br>
-      <select class="form-control" name="district" id="mySelect" onchange="myFunction()">
-        <option value="all" selected>All</option>
-        <option value="colombo">Colombo</option>
-        <option value="gampaha">Gampaha</option>
-        <option value="kaluthara">Kaluthara</option>
-        <option value="galle">Galle</option>
-        <option value="mathara">Matara</option>
-        <option value="hambanthota">Hambanthota</option>
-        <option value="kegalle">Kegalle</option>
-        <option>Rathnapura</option>
-        <option>Badulla</option>
-        <option>Bandarawela</option>
-        <option>Trinkomalee</option>
-        <option>Batticaloa</option>
-        <option>Ampara</option>
-        <option>Kandy</option>
-        <option>Nuwara Eliya</option>
-        <option>Matale</option>
-        <option>Puththalama</option>
-        <option>Kurunegala</option>
-        <option>Anuradhapura</option>
-        <option>Polonnaruwa</option>
-        <option>Mannar</option>
-        <option>Vavniya</option>
-        <option>Mullative</option>
-        <option>Kilinochchi</option>
-        <option>Jaffna</option>
-      </select><br>
-      <input type="button" value="Go" class="btn btn-secondary" onClick="window.location.reload()">
+      <div class="container-fluid">
+        <label>Location</label><br>
+        <select class="form-control" name="district" id="mySelect" onchange="myFunction()">
+          <option value="all" selected>All</option>
+          <option value="colombo">Colombo</option>
+          <option value="gampaha">Gampaha</option>
+          <option value="kaluthara">Kaluthara</option>
+          <option value="galle">Galle</option>
+          <option value="mathara">Matara</option>
+          <option value="hambanthota">Hambanthota</option>
+          <option value="kegalle">Kegalle</option>
+          <option>Rathnapura</option>
+          <option>Badulla</option>
+          <option>Bandarawela</option>
+          <option>Trinkomalee</option>
+          <option>Batticaloa</option>
+          <option>Ampara</option>
+          <option>Kandy</option>
+          <option>Nuwara Eliya</option>
+          <option>Matale</option>
+          <option>Puththalama</option>
+          <option>Kurunegala</option>
+          <option>Anuradhapura</option>
+          <option>Polonnaruwa</option>
+          <option>Mannar</option>
+          <option>Vavniya</option>
+          <option>Mullative</option>
+          <option>Kilinochchi</option>
+          <option>Jaffna</option>
+        </select><br>
+        <input type="button" value="Go" class="btn btn-secondary" onClick="window.location.reload()">
+      </div>
+
+<div class="container-fluid price_slider">
+  <br>
+  <label for="price-min">Price:</label>
+  <div class="row">
+    <div class="col-md-6">
+<input type="text" id="myMin" class="form-control" name="min"  placeholder="min">
+    </div>
+    <div class="col-md-6">
+<input type="text" id="myMax" name="max" class="form-control"  placeholder="max">
+    </div>
+  </div>
+  <br>
+  <input type="button" value="Go" class="btn btn-secondary" onClick="window.location.reload()">
+</div>
     </div>
     </div>
     <div class="col-lg-9 col-md-9 all">
@@ -243,6 +260,19 @@ $(document).ready(function(){
     });
 
   // }
+  var min = parseDouble(document.getElementById("#myMin").value);
+  var max = parseDouble(document.getElementById("#myMax").value);
+
+  var rprice = "<?php echo $price; ?>";
+  document.write(min);
+if (min<=rprice && max>=rprice) {
+  $("#myList li").filter(function() {
+    $(this).toggle($(this).indexOf(rprice) > -1)
+  });
+}else {
+  document.write("wrong chice");
+}
+
 
 });
 
