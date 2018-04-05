@@ -8,6 +8,7 @@
    $catagory = $_GET['catagory'];
    $query = "SELECT * FROM sell_item WHERE catagory='$catagory'";
   echo $catagory;
+  // echo $catagory;
 //   echo '<script type="text/javascript">',
 //         'myFunction();',
 //      '</script>'

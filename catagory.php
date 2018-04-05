@@ -56,7 +56,8 @@ $catagory;
                   <h4>Electronics</h4>
                 </div>
                 <?php
-                $catagory="electronics";
+                $catagory="Electronics";
+
                  ?>
                 <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/electronics.jpg" alt=""></a>
 
@@ -68,7 +69,7 @@ $catagory;
             <h4>Cars & Vehicles</h4>
           </div>
           <?php
-          $catagory="Cars & Vehicles";
+          $catagory= urlencode("Cars & Vehicles");
            ?>
             <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/vehicle.jpg" alt=""></a>
         </figure>
@@ -79,7 +80,7 @@ $catagory;
             <h4>Property</h4>
           </div>
           <?php
-          $catagory="property";
+          $catagory="Property";
            ?>
           <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/property.jpg" alt=""></a>
         </figure>
@@ -90,7 +91,7 @@ $catagory;
             <h4>Jobs</h4>
           </div>
           <?php
-          $catagory="jobs";
+          $catagory="Jobs";
            ?>
           <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/jobs.jpg" alt=""></a>
 
@@ -102,7 +103,7 @@ $catagory;
             <h4>Music & Instruments</h4>
           </div>
           <?php
-          $catagory="music";
+          $catagory=urlencode("Music & Instruments");
            ?>
           <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/instrument1.jpg" alt=""></a>
         </figure>
@@ -113,7 +114,7 @@ $catagory;
             <h4>Work Overseas</h4>
           </div>
           <?php
-          $catagory="work_overseas";
+          $catagory=urlencode("Work Overseas");
            ?>
           <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/workseas.jpg" alt=""></a>
         </figure>
@@ -124,7 +125,7 @@ $catagory;
             <h4>Home & Garden</h4>
           </div>
           <?php
-          $catagory="home_garden";
+          $catagory=urlencode("Home & Garden");
            ?>
           <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/garden.jpg" alt=""></a>
         </figure>
@@ -135,7 +136,7 @@ $catagory;
             <h4>Fasion, Healthy & Beauty</h4>
           </div>
           <?php
-          $catagory="fashion";
+          $catagory=urlencode("Fasion, Healthy & Beauty");
            ?>
           <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/beauty.jpg" alt=""></a>
         </figure>
@@ -146,7 +147,7 @@ $catagory;
             <h4>Kids items</h4>
           </div>
           <?php
-          $catagory="kids_item";
+          $catagory=urlencode("Kids items");
            ?>
           <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/baby.jpg" method="post" alt=""></a>
 
@@ -158,7 +159,7 @@ $catagory;
       <h4>Services</h4>
     </div>
     <?php
-    $catagory="service";
+    $catagory="Services";
      ?>
       <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/service.jpg" alt=""></a>
   </figure>
@@ -169,7 +170,7 @@ $catagory;
       <h4>Education</h4>
     </div>
     <?php
-    $catagory="education";
+    $catagory="Education";
      ?>
     <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/education.jpg" alt=""></a>
   </figure>
@@ -180,7 +181,7 @@ $catagory;
       <h4>Animals</h4>
     </div>
     <?php
-    $catagory="animals";
+    $catagory="Animals";
      ?>
     <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/animal.jpg" alt=""></a>
 
@@ -192,7 +193,7 @@ $catagory;
       <h4>Food & Agriculture</h4>
     </div>
     <?php
-    $catagory="food";
+    $catagory=urlencode("Kids itemsFood & Agriculture");
      ?>
     <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/agri.jpg" alt=""></a>
 
@@ -204,7 +205,7 @@ $catagory;
       <h4>Arts & Handmades</h4>
     </div>
     <?php
-    $catagory="arts";
+    $catagory=urlencode("Arts & Handmades");
      ?>
     <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/art.jpg" alt=""></a>
 
@@ -216,7 +217,7 @@ $catagory;
       <h4>Hobby & Sports</h4>
     </div>
     <?php
-    $catagory="hobby";
+    $catagory=urlencode("Hobby & Sports");
      ?>
     <a href="viewitem.php?catagory=<?php echo $catagory; ?>"><img src="images/sport1.jpg" alt=""></a>
 

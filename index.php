@@ -94,7 +94,7 @@
 </div>
 <div class="col-sm-3">
   <li class="fa fa-envelope"></li>
-    <h4 class="text-center">Get exact you orderd</h4>
+    <h4 class="text-center">Get exact what you orderd</h4>
 <p class="arranging">We give you exactly what it's shown on the web.You can count on us for quality and integrity.</p>
 </div>
 <div class="col-sm-3">

@@ -109,12 +109,14 @@ if (isset($_SESSION['susername'])){
 <option>Work Overseas</option>
 <option>Home & garden</option>
 <option>Fasion, healthy & beauty</option>
-<option>Hobby,Sport & Kids</option>
+<option>Kids items</option>
 <option>Business & industry</option>
 <option>Services</option>
 <option>Education</option>
 <option>Animals</option>
 <option>Food & Agriculture</option>
+<option>Arts & Handmades</option>
+<option>Hobby & Sports</option>
 <option>Other</option>
 </select>
 </div><br>

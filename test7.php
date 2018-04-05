@@ -6,8 +6,6 @@
   </head>
   <body>
     <?php
-
-
 //   $to_time = strtotime("2008-12-13 10:42:00");
 // $from_time = strtotime("2008-12-13 10:21:00");
 // echo round(abs($to_time - $from_time) /3600, 2). " hours ago";
@@ -37,7 +35,6 @@ if ($since_start->y>0) {
             }else {
               echo $since_start->i.' minutes<br>';
             }
-
   }
   }
 }
