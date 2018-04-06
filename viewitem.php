@@ -101,6 +101,7 @@ $result_set = mysqli_query($connction,$query);
   </div>
   <br>
   <input type="button" value="Go" class="btn btn-secondary" onClick="window.location.reload()">
+  <p></p>
 </div>
     </div>
     </div>
@@ -260,17 +261,21 @@ $(document).ready(function(){
     });
 
   // }
-  var min = parseDouble(document.getElementById("#myMin").value);
-  var max = parseDouble(document.getElementById("#myMax").value);
+  var min = parseFloat(document.getElementById("myMin").value);
+  var max = parseFloat(document.getElementById("myMax").value);
+
+  var myJSON = '{"price":75}';
+  var myObj = JSON.parse(myJSON);
+  // document.getElementById("demo").innerHTML = myObj.name;
 
   var rprice = "<?php echo $price; ?>";
-  document.write(min);
+
 if (min<=rprice && max>=rprice) {
+
   $("#myList li").filter(function() {
     $(this).toggle($(this).indexOf(rprice) > -1)
   });
-}else {
-  document.write("wrong chice");
+
 }
 
 
