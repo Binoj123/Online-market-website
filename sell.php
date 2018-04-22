@@ -35,7 +35,7 @@ if (isset($_SESSION['susername'])){
 <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript" language="javascript"></script>
-<script src="path/to/your/jquery.MultiFile.js" type="text/javascript" language="javascript"></script>
+<script src="js/jquery-3.3.1.min.js" type="text/javascript" language="javascript"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 </head>

@@ -101,23 +101,23 @@ $result = mysqli_query($connction,$query);
   <div class="row">
     <div class="col-sm-3">
         <li class="fa fa-users"></li>
-      <h4 class="text-center">100% Free Delivary</h4><br>
-    <p class="arranging">We charge you only for the goods that you buy.No shipment costs or any other additioal payments.</p>
+      <h4 class="text-center">100%<b> Free</b> <br>Service</h4>
+    <p class="arranging">Our service is 100% free and our mission is meet best sellers and customers at one market place.</p>
 </div>
 <div class="col-sm-3">
   <li class="fa fa-certificate"></li>
-    <h4 class="text-center">Super fast delivary speed</h4>
-<p class="arranging">Our super fast delivary system speed won't let you wait for your goods.</p>
+    <h4 class="text-center">Oppotunities for Overseas sales</h4>
+<p class="arranging">There has been noted patas.lk growth in the various categories of homeware, pets, fashion and sporting goods and look forward various choices at one time. </p>
 </div>
 <div class="col-sm-3">
   <li class="fa fa-envelope"></li>
     <h4 class="text-center">Get exact what you orderd</h4>
-<p class="arranging">We give you exactly what it's shown on the web.You can count on us for quality and integrity.</p>
+<p class="arranging">We have already ensure our sellers give you exactly what it's shown on the site.Dear customers you can count on us for quality and integrity.</p>
 </div>
 <div class="col-sm-3">
   <li class="fa fa-shopping-basket"></li>
-    <h4 class="text-center">Don't like? Just exchange it</h4>
-<p class="arranging">This is my first online webstore you will able to buy any goods from here and also meet customers and sellers.  </p>
+    <h4 class="text-center">Greater transparency of prices & products</h4>
+<p class="arranging">Here customers and offer convenient way to compare prices and products from a single source.</p>
 </div>
   </div>
 </div>
