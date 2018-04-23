@@ -254,6 +254,7 @@ patas.lk is very fexible website and very easy to use. Also I'm a customer of
 this website since last year. I glad to say here sellers are very responsible
 and fair prices of goods in very good quality.
         </p>
+        <br><br>
         <cite><img src="images/cus.jpg" alt="customer">Sanath Jayasuriya</cite>
 
       </blockquote>
@@ -262,10 +263,10 @@ and fair prices of goods in very good quality.
     <div class="col-md-4">
       <blockquote>
         <p>
-who is such man that like him or her netherless to do main got he war
-who is such man that like him or her netherless to do main got he war
-who is such man that like him or her netherless to do main got he war
-who is such man that like him or her netherless to do main got he war
+I'm a customer of patas.lk. This is awsome website that we have ever seen.
+I can easily manage my sellers using filters and also very quick quick response
+make me happier.Further using catagory page that is easy to buy needs what I
+exactly wants. the sellers who run this site are very fair and good sellers.
         </p>
         <cite><img src="images/cus.jpg" alt="customer">Adale Raj</cite>
 
