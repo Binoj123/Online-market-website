@@ -236,10 +236,11 @@ $result = mysqli_query($connction,$query);
     <div class="col-md-4">
       <blockquote>
         <p>
-who is such man that like him or her netherless to do main got he war
-who is such man that like him or her netherless to do main got he war
-who is such man that like him or her netherless to do main got he war
-who is such man that like him or her netherless to do main got he war
+Actually i'm seller of patas.lk since last few years already i'm happy to say
+this is my one and only website deal with best customers I had ever met.
+Since those days to now I have already sold my goods without any complain why
+patas.lk ensure me as good seller with higher ratings all the day. Thank you!
+
         </p>
         <cite><img src="images/cus.jpg" alt="customer">Kumar Sangakkara</cite>
 
@@ -249,10 +250,9 @@ who is such man that like him or her netherless to do main got he war
     <div class="col-md-4">
       <blockquote>
         <p>
-who is such man that like him or her netherless to do main got he war
-who is such man that like him or her netherless to do main got he war
-who is such man that like him or her netherless to do main got he war
-who is such man that like him or her netherless to do main got he war
+patas.lk is very fexible website and very easy to use. Also I'm a customer of
+this website since last year. I glad to say here sellers are very responsible
+and fair prices of goods in very good quality.
         </p>
         <cite><img src="images/cus.jpg" alt="customer">Sanath Jayasuriya</cite>
 
