@@ -98,8 +98,7 @@ color: white;
   transition: all .5s ease-in;
 }
 .copy{
-  width: 70%;
-  margin-left: 23%;
+  /* width: 70%; */
   margin-bottom: 20px;
 }
 h3:after{
@@ -117,11 +116,16 @@ h3:after{
 }
 .arranging{
   text-align: justify;
+  font-size: 14px;
+  margin-top: 5%;
 }
 .features li{
-font-size: 40px;
+font-size: 30px;
 color: #e67e22;
-margin-left: 40%;
+align: center;
+/* margin-left: 40%; */
+margin-bottom: 7%;
+margin-top: 5%;
 }
 
 .meal-showcase{

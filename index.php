@@ -28,6 +28,7 @@ $result = mysqli_query($connction,$query);
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
 <script src="js/jquery-3.3.1.min.js"></script>
   </head>
@@ -96,26 +97,37 @@ $result = mysqli_query($connction,$query);
   <selection class="features">
     <div id="div1">
 <h3 class="text-center">ABOUT PATAS.LK</h3>
+<div class="text-center">
 <p class="copy">Patas.lk is a online webstore that you will able to buy any goods from here and also meet customers and sellers at a one place.</p>
-<div class="container">
+</div>
+
+<div class="container forpara">
   <div class="row">
     <div class="col-sm-3">
-        <li class="fa fa-users"></li>
+      <div class="text-center">
+<li class="fa fa-users"></li>
+      </div>
       <h4 class="text-center">100%<b> Free</b> <br>Service</h4>
     <p class="arranging">Our service is 100% free and our mission is meet best sellers and customers at one market place.</p>
 </div>
 <div class="col-sm-3">
+    <div class="text-center">
   <li class="fa fa-certificate"></li>
+</div>
     <h4 class="text-center">Oppotunities for Overseas sales</h4>
-<p class="arranging">There has been noted patas.lk growth in the various categories of homeware, pets, fashion and sporting goods and look forward various choices at one time. </p>
+<p class="arranging">There has been noted patas.lk growth in the various categories of homeware, pets, fashion and sporting goods and look forward various choices.</p>
 </div>
 <div class="col-sm-3">
-  <li class="fa fa-envelope"></li>
+    <div class="text-center">
+  <li class="fa fa-shopping-basket"></li>
+</div>
     <h4 class="text-center">Get exact what you orderd</h4>
 <p class="arranging">We have already ensure our sellers give you exactly what it's shown on the site.Dear customers you can count on us for quality and integrity.</p>
 </div>
 <div class="col-sm-3">
-  <li class="fa fa-shopping-basket"></li>
+    <div class="text-center">
+  <li class="fa fa-dollar"></li>
+</div>
     <h4 class="text-center">Greater transparency of prices & products</h4>
 <p class="arranging">Here customers and offer convenient way to compare prices and products from a single source.</p>
 </div>
