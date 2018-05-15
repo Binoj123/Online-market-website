@@ -58,7 +58,7 @@ $result_set = mysqli_query($connction,$query);
 <div class="col-md-4">
   <h4 style="color:rgb(0, 177, 97);"><li class="fa fa-map-marker"></li>   Location</h4> <hr> <br>
 
-  <p style="color:rgb(254, 137, 0);"><?php echo $record['city'];?>,&nbsp<?php echo $record['location'];?></p><br>
+  <p style="color:rgb(215, 91, 12);"><?php echo $record['city'];?>,&nbsp<?php echo $record['location'];?></p><br>
 
   <h4 style="color:rgb(0, 155, 254);"><li class="fa fa-address-card"></li>   Contact Details</h4>
   <hr>
@@ -67,7 +67,7 @@ $result_set = mysqli_query($connction,$query);
   <div class="seller" style="color:rgb(215, 91, 12);">
     <p>Seller Name &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:<b> <?php echo $record['uname'];?></b></p>
     <p>Seller Contact Number &nbsp:<b> <?php echo $record['phone'];?></b></p>
-    <p>Seller Email Address &nbsp&nbsp&nbsp&nbsp: <b><?php echo $record['city'];?></b></p><br>
+    <p>Seller Email Address &nbsp&nbsp&nbsp&nbsp&nbsp: <b><?php echo $record['city'];?></b></p><br>
   </div>
 
 </div>

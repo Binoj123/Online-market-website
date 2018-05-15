@@ -104,8 +104,8 @@ if ($result) {
       </select>
       </div>
       <input type="text" name="city" placeholder="City" class="form-control" required><br>
-      <input class="form-control" id="password" type="password" name="password" value="" required><br>
-      <input class="form-control"  id="cpassword" type="password" name="cpassword" value=""><br>
+      <input class="form-control" id="password" placeholder="Password" type="password" name="password" value="" required><br>
+      <input class="form-control"  id="cpassword" placeholder="Confirm Password" type="password" name="cpassword" value=""><br>
 <input type="submit" class="btn btn-warning btn-block" style="" name="" value="submit">
     </form>
 
