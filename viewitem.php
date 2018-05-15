@@ -183,8 +183,7 @@ echo<<<_END
         <button type="submit" class="btn btn-primary viewmore">View More</button>
         <input type="hidden" value="$id" name="id">
         </form>
-
-        <p style="color:white;">$dbcatagory</p>
+          <p style="color:white; font-size:1px;">$dbcatagory</p>
         </div>
         </div>
         </div>
