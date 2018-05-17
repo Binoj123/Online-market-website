@@ -7,15 +7,15 @@
  if (isset($_GET['catagory'])) {
    $catagory = $_GET['catagory'];
    $query = "SELECT * FROM sell_item WHERE catagory='$catagory'";
-  echo $catagory;
+  // echo $catagory;
   // echo $catagory;
 //   echo '<script type="text/javascript">',
 //         'myFunction();',
 //      '</script>'
 // ;
 }else {
-  echo "all";
-  echo "hi";
+  // echo "all";
+  // echo "hi";
   $query = "SELECT * FROM sell_item";
 }
 $result_set = mysqli_query($connction,$query);
@@ -37,6 +37,7 @@ $result_set = mysqli_query($connction,$query);
   <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -88,7 +89,7 @@ $result_set = mysqli_query($connction,$query);
         <input type="button" value="Go" class="btn btn-secondary" onClick="window.location.reload()">
       </div>
 
-<div class="container-fluid price_slider">
+<!-- <div class="container-fluid price_slider">
   <br>
   <label for="price-min">Price:</label>
   <div class="row">
@@ -102,7 +103,7 @@ $result_set = mysqli_query($connction,$query);
   <br>
   <input type="button" value="Go" class="btn btn-secondary" onClick="window.location.reload()">
   <p></p>
-</div>
+</div> -->
     </div>
     </div>
     <div class="col-lg-9 col-md-9 all">
@@ -230,7 +231,7 @@ _END;
   </div>
 
 <div class="copyright">
-  <p class="text-center">Copyrigth @ 2018 by Binoj.All rigth reserved.</p>
+  <p class="text-center">Copyrigth @ 2018 by Patas.lk. All rigth reserved.</p>
 </div>
 </div>
   </footer>

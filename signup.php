@@ -135,7 +135,7 @@ if ($result) {
     </div>
 
   <div class="copyright">
-    <p class="text-center">Copyrigth @ 2018 by patas.lk.All rigth reserved.</p>
+    <p class="text-center">Copyrigth @ 2018 by patas.lk. All rigth reserved.</p>
   </div>
   </div>
     </footer>
