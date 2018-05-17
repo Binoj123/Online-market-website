@@ -265,7 +265,7 @@ $catagory;
       </div>
 
     <div class="copyright">
-      <p class="text-center">Copyrigth @ 2018 by Binoj.All rigth reserved.</p>
+      <p class="text-center">Copyrigth @ 2018 by Patas.lk. All rigth reserved.</p>
     </div>
     </div>
       </footer>

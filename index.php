@@ -254,7 +254,7 @@ Since those days to now I have already sold my goods without any complain why
 patas.lk ensure me as good seller with higher ratings all the day. Thank you!
 
         </p>
-        <cite><img src="images/cus.jpg" alt="customer">Kumar Sangakkara</cite>
+        <cite><img src="images/cus.jpg" alt="customer">Nayana Madhuwantha</cite>
 
       </blockquote>
 
@@ -267,7 +267,7 @@ this website since last year. I glad to say here sellers are very responsible
 and fair prices of goods in very good quality.
         </p>
         <br><br>
-        <cite><img src="images/cus.jpg" alt="customer">Sanath Jayasuriya</cite>
+        <cite><img src="images/cus.jpg" alt="customer">Ashan Samarasinghe</cite>
 
       </blockquote>
 
@@ -280,7 +280,7 @@ I can easily manage my sellers using filters and also very quick quick response
 make me happier.Further using catagory page that is easy to buy needs what I
 exactly wants. the sellers who run this site are very fair and good sellers.
         </p>
-        <cite><img src="images/cus.jpg" alt="customer">Adale Raj</cite>
+        <cite><img src="images/cus.jpg" alt="customer">Pasan Avishka</cite>
 
       </blockquote>
 
@@ -338,7 +338,7 @@ exactly wants. the sellers who run this site are very fair and good sellers.
   </div>
 
 <div class="copyright">
-  <p class="text-center">Copyrigth @ 2018 by Binoj.All rigth reserved.</p>
+  <p class="text-center">Copyrigth @ 2018 by Patas.lk. All rigth reserved.</p>
 </div>
 </div>
   </footer>
