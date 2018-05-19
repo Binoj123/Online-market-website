@@ -27,7 +27,7 @@ if (isset($_SESSION['susername'])){
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="js/bootstrap.min.js">
-  <link href="js/bootstrap.min.js">
+  <link rel="stylesheet" href="js/bootstrap.min.js">
   <link rel="stylesheet" href="js/bootstrap.bundle.min.js">
   <link rel="stylesheet" href="sellstyle.css" type="text/css">
   <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
@@ -238,26 +238,66 @@ if (isset($_SESSION['susername'])){
 
 else {
   ?>
-  <div id="memberModal" class="modal" >
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="memberModalLabel">You should signing in first!</h4>
-        </div>
-        <div class="modal-body">
-          <p>However the account provided is not known.<BR>
-          If you just got invited to the group, please wait for a day to have the database synchronized.</p>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <title>Selling your items</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap.min.js">
+    <link rel="stylesheet" href="js/bootstrap.min.js">
+    <link rel="stylesheet" href="js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="sellstyle.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
 
-          <p>You will now be shown the Demo site.</p>
-        </div>
-        <div class="modal-footer">
-          <input type="button" class="btn btn-info" value="Login page" onclick=" relocate_home()">
-     <!--     <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button> -->
-        </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript" language="javascript"></script>
+  <script src="js/jquery-3.3.1.min.js" type="text/javascript" language="javascript"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+  </head>
+    <body>
+      <div class="container">
+          <p class="text-center">oops something went wrong....!</p>
+    <button type="button" class="btn btn-primary">Left</button>
       </div>
-    </div>
-  </div>
+
+    <div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="memberModal">You should signing in first!</h4>
+              </div>
+              <div class="modal-body">
+                <p>However the account provided is not known.<BR>
+                If you just got invited to the group, please wait for a day to have the database synchronized.</p>
+
+                <p>You will now be shown the Demo site.</p>
+              </div>
+              <div class="modal-footer">
+                <input type="button" class="btn btn-info" value="Login page" onclick=" relocate_home()">
+           <!--    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button> -->
+               </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+        $(document).ready(function () {
+
+         $('#memberModall').modal('show');
+
+        });
+        function relocate_home()
+        {
+        location.href = 'index.php';
+        }
+        </script>
+    </body>
+    </html>
+
   <?php
 echo "<script>
 $(document).ready(function () {
