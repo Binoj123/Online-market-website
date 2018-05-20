@@ -259,17 +259,26 @@ else {
 
   </head>
     <body>
+      <header>
+          <div class="text-center"><img src="images/logo3.png" alt="logo"></div>
+
+      </header>
       <div class="container">
-          <p class="text-center">oops something went wrong....!</p>
-    <button type="button" class="btn btn-primary">Left</button>
+        <div class="wrong">
+          <h1 class="text-center">oops something went wrong....!</h1>
+          <p class="text-center">You wish to sell your items in patas.lk. Sure please first you should login
+          your account first.<br> Please enter login button below. If your not our customer yet please sign up now. click signup button
+        now. </p>
+        </div>
+
       </div>
 
-    <div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="memberModall" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="memberModal">You should signing in first!</h4>
+                <h4 class="modal-title" id="memberModall">You should signing in first!</h4>
               </div>
               <div class="modal-body">
                 <p>However the account provided is not known.<BR>
@@ -278,9 +287,9 @@ else {
                 <p>You will now be shown the Demo site.</p>
               </div>
               <div class="modal-footer">
-                <input type="button" class="btn btn-info" value="Login page" onclick=" relocate_home()">
+                <input type="button" class="btn btn-info" value="Login page" onclick=" relocate_home()"> -->
            <!--    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button> -->
-               </div>
+               <!-- </div>
             </div>
           </div>
         </div>
@@ -294,7 +303,7 @@ else {
         {
         location.href = 'index.php';
         }
-        </script>
+        </script> -->
     </body>
     </html>
 
@@ -302,7 +311,7 @@ else {
 echo "<script>
 $(document).ready(function () {
 
- $('#memberModal').modal('show');
+ $('#memberModall').modal('show');
 
 });
 function relocate_home()
