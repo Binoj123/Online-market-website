@@ -10,6 +10,11 @@ body{
 
 
 }
+header img{
+width: 25%;
+height: auto ;
+margin: 40px;
+}
 
 .logo img{
   height: 100px;
@@ -92,4 +97,13 @@ padding-bottom: 20px;
 .submiter{
   margin-top: 50px;
 
+}
+.wrong{
+color: white;
+margin-top: 5%;
+}
+
+.wrong p{
+  margin-top: 2%;
+font-size: 20px;
 }
