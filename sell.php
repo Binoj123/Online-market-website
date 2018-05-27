@@ -43,7 +43,7 @@ if (isset($_SESSION['susername'])){
     <header>
       <div class="container-fluid logo">
         <div class="row">
-          <img src="images/logo3.png" alt="logo">
+            <img class="text-center"src="images/logo3.png" alt="logo">
         </div>
 <div class="hero">
   <h3 class="text-center">WHAT YOU LOOKING FOR SELL OUR CUSTOMERS...</h3>
@@ -272,9 +272,44 @@ else {
         <div class="btn-center">
           <input type="button" class="btn btn-info" value="Sign up" onclick=" relocate_sign()">
           <input type="button" class="btn btn-info" value="Home page" onclick=" relocate_home()">
+          <input type="button" class="btn btn-info" value="Login" onclick="document.getElementById('id01').style.display='block'">
           </div>
         </div>
       </div>
+      <div id="id01" class="modal">
+        <div class="mheading">
+          <h2 class="text-center">Login to patas.lk</h2>
+        </div>
+<form accept-charset="UTF-8" action="/patas/login.php" class="modal-content animate" method="post"  >
+
+
+    <div  class="imgcontainer">
+      <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
+      <img src="images/user2.jpg" alt="User" class="avatar">
+    </div>
+
+    <div class="container">
+
+      <label for="uname"><b>Email</b></label>
+      <input type="email" style="width:100%; height:45px; padding-left:10px;" name="username" required>
+      <br><br>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" style="padding-left:10px; height:45px;"  name="psw" required>
+        <!-- <input type="submit" name="submit" value="submit"> -->
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+
+      <button type="button"  onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="email.php">password?</a></span>
+    </div>
+</form>
+</div>
       <script type="text/javascript">
    function relocate_home()
  {
