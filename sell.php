@@ -269,10 +269,22 @@ else {
           <p class="text-center">You wish to sell your items in patas.lk. Sure please first you should login
           your account first.<br> Please enter login button below. If your not our customer yet please sign up now. click signup button
         now. </p>
+        <div class="btn-center">
+          <input type="button" class="btn btn-info" value="Sign up" onclick=" relocate_sign()">
+          <input type="button" class="btn btn-info" value="Home page" onclick=" relocate_home()">
+          </div>
         </div>
-
       </div>
-
+      <script type="text/javascript">
+   function relocate_home()
+ {
+      location.href = "../index.php";
+ }
+ function relocate_sign()
+{
+    location.href = "../patas/signup.php";
+}
+    </script>
     <!-- <div class="modal fade" id="memberModall" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
