@@ -415,3 +415,17 @@ span.psw {
        width: 100%;
     }
 }
+.logout{
+  width: 60px;
+  color: white;
+  background-color: inherit;
+  float: right;
+
+  border: none;
+}
+.fa-power-off{
+  padding-left: -50px;
+}
+.logout:hover{
+  /* background-color: rgb(255, 142, 0); */
+}

@@ -1,5 +1,6 @@
 <?php require_once('ums/inc/connection.php') ?>
 <?php
+session_start();
  if (isset($_POST['submit'])) {
 
 $emailf = $_POST['emailf'];
@@ -7,6 +8,7 @@ $commentf = $_POST['commentf'];
 
 $query = "INSERT INTO feedback(emailf,commentf)VALUES('{$emailf}','{$commentf}')";
 $result = mysqli_query($connction,$query);
+
 // if ($result) {
 // echo "succesfullty added";
 // }else {
@@ -14,6 +16,16 @@ $result = mysqli_query($connction,$query);
 // }
 }
 
+
+
+if (isset($_POST['logout'])) {
+    //real search code goes here
+    // remove all session variables
+
+session_unset();
+// destroy the session
+session_destroy();
+}
  ?>
 
 
@@ -41,11 +53,21 @@ $result = mysqli_query($connction,$query);
       <div class="container-fluid">
         <div class="row">
           <ul class="mainnav">
-            <li><a href="#login" onclick="document.getElementById('id01').style.display='block'">LOGIN</a></li>
+            <li><a href="#login" id="hideLogout" onclick="document.getElementById('id01').style.display='block'">LOGIN</a></li>
             <li><a href="signup.php" onclick="document.getElementById('id02').style.display='block'">SIGN UP</a></li>
             <li><a href="catagory.php">CATOGORY</a></li>
             <li><button id="click" style="background:none; font-size:14px; border-bottom:2px; padding:0; font-weight:bold;">ABOUT US</button></li>
             <li><button id="clicko" style="background:none; font-size:14px; border-bottom:2px; padding:0; font-weight:bold;">OUR CUSTOMERS</button></li>
+            <?php
+            if (isset($_SESSION['susername'])){
+              ?>
+              <form action="index.php" method="post">
+              <button type="submit" title="Logout" name="logout" class="logout"><li class="fa fa-power-off"></li></button>
+              </form>
+              <?php
+            }
+
+             ?>
           </ul>
         </div>
       </div>
@@ -358,6 +380,7 @@ exactly wants. the sellers who run this site are very fair and good sellers.
       }
     }
 
+
     $(document).ready(function (){
              $("#click").click(function (){
                  $('html, body').animate({
@@ -369,7 +392,10 @@ exactly wants. the sellers who run this site are very fair and good sellers.
                      scrollTop: $("#div2").offset().top
                  }, 1000);
              });
+
          });
+
+
   </script>
   </body>
 </html>
