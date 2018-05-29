@@ -53,7 +53,19 @@ session_destroy();
       <div class="container-fluid">
         <div class="row">
           <ul class="mainnav">
-            <li><a href="#login" id="hideLogout" onclick="document.getElementById('id01').style.display='block'">LOGIN</a></li>
+            <?php
+            if (isset($_SESSION['susername'])){
+              ?>
+                <li><a href="profile.php" id="hideLogout">PROFILE</a></li>
+              <?php
+            }else{
+              ?>
+              <li><a href="#login" id="hideLogout" onclick="document.getElementById('id01').style.display='block'">LOGIN</a></li>
+              <?php
+            }
+
+             ?>
+
             <li><a href="signup.php" onclick="document.getElementById('id02').style.display='block'">SIGN UP</a></li>
             <li><a href="catagory.php">CATOGORY</a></li>
             <li><button id="click" style="background:none; font-size:14px; border-bottom:2px; padding:0; font-weight:bold;">ABOUT US</button></li>
