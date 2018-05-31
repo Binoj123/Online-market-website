@@ -18,3 +18,13 @@ header{
   margin: 5%;
   float: right;
 }
+header h2{
+  color: rgb(245, 168, 16);
+}
+.mid{
+  margin-top: 5%;
+  color: white;
+}
+.left h5{
+  margin-bottom: 8%;
+}

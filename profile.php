@@ -1,4 +1,20 @@
-<?php ?>
+<?php require_once('ums/inc/connection.php') ?>
+<?php
+session_start();
+$user = $_SESSION['susername'];
+$querys = "SELECT * FROM signup WHERE email='$user'";
+$result_set = mysqli_query($connction,$querys);
+$record = mysqli_fetch_assoc($result_set);
+
+  // $row=$result_set->fetch_array(MYSQLI_ASSOC);
+
+
+  $name = $record['name'];
+  $email = $record['email'];
+  $telephone = $record['telephone'];
+  $district = $record['district'];
+  $city = $record['city'];
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -24,7 +40,7 @@
         </div>
         <div class="col-md-4">
           <header>
-            <h2>Hi, Welcome to your profile..!</h2>
+            <h2>Hi <?php echo $name; ?>, Welcome to your profile..!</h2>
           </header>
         </div>
         <div class="col-md-4">
@@ -34,6 +50,22 @@
           </div>
 
         </div>
+      </div>
+    </div>
+    <div class="container mid">
+      <div class="row">
+        <div class="col-md-4 left">
+          <h5>Bio of yourself</h5>
+          <p>Name :<?php echo $name; ?></p>
+          <p>Email :<?php echo $email; ?></p>
+          <p>Telephone :<?php echo $telephone; ?></p>
+          <p>District :<?php echo $district; ?></p>
+          <p>City :<?php echo $city; ?></p>
+        </div>
+        <div class="col-md-8 right">
+          <h5>Your posts</h5>
+        </div>
+
       </div>
     </div>
   </body>
