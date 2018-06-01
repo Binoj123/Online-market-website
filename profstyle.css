@@ -22,9 +22,16 @@ header h2{
   color: rgb(245, 168, 16);
 }
 .mid{
+  margin-top: 2%;
+  color: white;
+}
+.left{
+  margin-right: 2%;
+}
+.first{
   margin-top: 5%;
   color: white;
 }
-.left h5{
-  margin-bottom: 8%;
+.but{
+  margin-top: 2%;
 }

@@ -52,21 +52,58 @@ $record = mysqli_fetch_assoc($result_set);
         </div>
       </div>
     </div>
+    <div class="container first">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Bio of yourself</h5>
+        </div>
+        <div class="col-md-8">
+            <h5>Your posts</h5>
+        </div>
+      </div>
+    </div>
     <div class="container mid">
       <div class="row">
-        <div class="col-md-4 left">
-          <h5>Bio of yourself</h5>
-          <p>Name :<?php echo $name; ?></p>
-          <p>Email :<?php echo $email; ?></p>
-          <p>Telephone :<?php echo $telephone; ?></p>
-          <p>District :<?php echo $district; ?></p>
-          <p>City :<?php echo $city; ?></p>
+        <div class="col-md-1.7 left">
+
+          <p>Name </p><br>
+          <p>Email </p><br>
+          <p>Telephone </p><br>
+          <p>District </p><br>
+          <p>City </p>
+        </div>
+        <div class="col-md-2.3 about">
+          <input type="text" class="form-control" name="name" value="<?php echo $name; ?>" disabled><br>
+          <input type="text" class="form-control" name="name" value="<?php echo $email; ?>" disabled><br>
+          <input type="text" class="form-control" name="name" value="<?php echo $telephone; ?>" disabled><br>
+          <input type="text" class="form-control" name="name" value="<?php echo $district; ?>" disabled><br>
+          <input type="text" class="form-control" name="name" value="<?php echo $city; ?>" disabled>
+          <!-- <p id="editor"></p> -->
         </div>
         <div class="col-md-8 right">
-          <h5>Your posts</h5>
+
         </div>
 
       </div>
+      <div class="row but">
+        <div class="col-md-3">
+        <button type="button" onclick="myFunction()" class="form-control" name="button">Edit info</button><br>
+          <input type="submit" class="form-control" name="sub" value="Update Info">
+        </div>
+      </div>
     </div>
+    <script type="text/javascript">
+    function myFunction() {
+  // document.getElementById("editor").innerHTML = "Hello World";
+// document.getElementsByTagName("INPUT")[0].setAttribute("disabled", false);
+document.getElementsByTagName("INPUT")[0].removeAttribute("disabled");
+document.getElementsByTagName("INPUT")[1].removeAttribute("disabled");
+document.getElementsByTagName("INPUT")[2].removeAttribute("disabled");
+document.getElementsByTagName("INPUT")[3].removeAttribute("disabled");
+document.getElementsByTagName("INPUT")[4].removeAttribute("disabled");
+  }
+    // $(document).ready(function (){
+    //          });
+    </script>
   </body>
 </html>
