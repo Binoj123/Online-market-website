@@ -2,14 +2,21 @@
 <?php
 session_start();
 $user = $_SESSION['susername'];
+$id = $_SESSION['sid'];
+echo $user;
+echo $id;
+//
 $querys = "SELECT * FROM signup WHERE email='$user'";
 $result_set = mysqli_query($connction,$querys);
 $record = mysqli_fetch_assoc($result_set);
 $id = $record['id'];
+// echo $id;
   // $row=$result_set->fetch_array(MYSQLI_ASSOC);
   if (isset($_POST['sub'])) {
-  $queryu = "UPDATE signup SET name='name',email='email' WHERE id=$id";
+    $namen = $_POST['namenew'];
+  $queryu = "UPDATE signup SET name='$namen',telephone='telephonenew',district='districtnew',city='citynew' WHERE id=$id";
   $resultu = mysqli_query($connction,$queryu);
+header("Refresh:0");
 
   if ($resultu) {
     echo "updated";
@@ -85,11 +92,38 @@ $connction->close();
         </div>
         <div class="col-md-2.3 about">
           <form  action="profile.php" method="post">
-            <input type="text" class="form-control" name="name" value="<?php echo $name; ?>" disabled><br>
-            <input type="text" class="form-control" name="name" value="<?php echo $email; ?>" disabled><br>
-            <input type="text" class="form-control" name="name" value="<?php echo $telephone; ?>" disabled><br>
-            <input type="text" class="form-control" name="name" value="<?php echo $district; ?>" disabled><br>
-            <input type="text" class="form-control" name="name" value="<?php echo $city; ?>" disabled>
+            <input type="text" class="form-control" name="namenew" value="<?php echo $name; ?>" disabled><br>
+            <input type="text" class="form-control" name="emailnew" value="<?php echo $email; ?>" disabled><br>
+            <input type="text" class="form-control" name="telephonenew" value="<?php echo $telephone; ?>" disabled><br>
+            <!-- <input type="text" class="form-control" name="districtnew" value="<?php echo $district; ?>" disabled><br> -->
+            <select class="form-control" name="districtnew" id="sel1" disabled>
+              <option <?php if($district == 'Colombo') echo"selected"; ?>>Colombo</option>
+              <option <?php if($district == 'Gampaha') echo"selected"; ?>>Gampaha</option>
+              <option <?php if($district == 'Kaluthara') echo"selected"; ?>>Kaluthara</option>
+              <option <?php if($district == 'Kaluthara') echo"selected"; ?>>Galle</option>
+              <option <?php if($district == 'Galle') echo"selected"; ?>>Matara</option>
+              <option <?php if($district == 'Hambanthota') echo"selected"; ?>>Hambanthota</option>
+              <option <?php if($district == 'Kegalle') echo"selected"; ?>>Kegalle</option>
+              <option <?php if($district == 'Rathnapura') echo"selected"; ?>>Rathnapura</option>
+              <option <?php if($district == 'Badulla') echo"selected"; ?>>Badulla</option>
+              <option <?php if($district == 'Bandarawela') echo"selected"; ?>>Bandarawela</option>
+              <option <?php if($district == 'Trinkomalee') echo"selected"; ?>>Trinkomalee</option>
+              <option <?php if($district == 'Batticaloa') echo"selected"; ?>>Batticaloa</option>
+              <option <?php if($district == 'Ampara') echo"selected"; ?>>Ampara</option>
+              <option <?php if($district == 'Kandy') echo"selected"; ?>>Kandy</option>
+              <option <?php if($district == 'Nuwara Eliya') echo"selected"; ?>>Nuwara Eliya</option>
+              <option <?php if($district == 'Matale') echo"selected"; ?>>Matale</option>
+              <option <?php if($district == 'Puththalama') echo"selected"; ?>>Puththalama</option>
+              <option <?php if($district == 'Kurunegala') echo"selected"; ?>>Kurunegala</option>
+              <option <?php if($district == 'Anuradhapura') echo"selected"; ?>>Anuradhapura</option>
+              <option <?php if($district == 'Polonnaruwa') echo"selected"; ?>>Polonnaruwa</option>
+              <option <?php if($district == 'Mannar') echo"selected"; ?>>Mannar</option>
+              <option <?php if($district == 'Vavniya') echo"selected"; ?>>Vavniya</option>
+              <option <?php if($district == 'Mullative') echo"selected"; ?>>Mullative</option>
+              <option <?php if($district == 'Kilinochchi') echo"selected"; ?>>Kilinochchi</option>
+              <option <?php if($district == 'Jaffna') echo"selected"; ?>>Jaffna</option>
+            </select>
+            <input type="text" class="form-control" name="citynew" value="<?php echo $city; ?>" disabled>
   <input type="submit" class="form-control" name="sub" value="Update Info">
           </form>
 
