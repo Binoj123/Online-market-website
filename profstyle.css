@@ -35,3 +35,28 @@ header h2{
 .but{
   margin-top: 2%;
 }
+.but button{
+  background-color: rgb(245, 168, 16);
+  color: white;
+  border: none;
+
+}
+
+.but button:hover{
+  background-color: rgb(244, 117, 13);
+  transition: ease-in 1s;
+  color: white;
+  border: none;
+}
+
+.but input[type="submit"]{
+  /* background-color: rgb(245, 168, 16); */
+  color: Black;
+  border: none;
+}
+.but input[type="submit"]:hover{
+  background-color: rgb(245, 168, 16);
+  transition: ease-in 1s;
+  color: white;
+  border: none;
+}

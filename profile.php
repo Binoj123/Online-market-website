@@ -5,9 +5,20 @@ $user = $_SESSION['susername'];
 $querys = "SELECT * FROM signup WHERE email='$user'";
 $result_set = mysqli_query($connction,$querys);
 $record = mysqli_fetch_assoc($result_set);
-
+$id = $record['id'];
   // $row=$result_set->fetch_array(MYSQLI_ASSOC);
+  if (isset($_POST['sub'])) {
+  $queryu = "UPDATE signup SET name='name',email='email' WHERE id=$id";
+  $resultu = mysqli_query($connction,$queryu);
 
+  if ($resultu) {
+    echo "updated";
+
+  }else {
+    echo "not updated";
+  }
+$connction->close();
+}
 
   $name = $record['name'];
   $email = $record['email'];
@@ -73,11 +84,15 @@ $record = mysqli_fetch_assoc($result_set);
           <p>City </p>
         </div>
         <div class="col-md-2.3 about">
-          <input type="text" class="form-control" name="name" value="<?php echo $name; ?>" disabled><br>
-          <input type="text" class="form-control" name="name" value="<?php echo $email; ?>" disabled><br>
-          <input type="text" class="form-control" name="name" value="<?php echo $telephone; ?>" disabled><br>
-          <input type="text" class="form-control" name="name" value="<?php echo $district; ?>" disabled><br>
-          <input type="text" class="form-control" name="name" value="<?php echo $city; ?>" disabled>
+          <form  action="profile.php" method="post">
+            <input type="text" class="form-control" name="name" value="<?php echo $name; ?>" disabled><br>
+            <input type="text" class="form-control" name="name" value="<?php echo $email; ?>" disabled><br>
+            <input type="text" class="form-control" name="name" value="<?php echo $telephone; ?>" disabled><br>
+            <input type="text" class="form-control" name="name" value="<?php echo $district; ?>" disabled><br>
+            <input type="text" class="form-control" name="name" value="<?php echo $city; ?>" disabled>
+  <input type="submit" class="form-control" name="sub" value="Update Info">
+          </form>
+
           <!-- <p id="editor"></p> -->
         </div>
         <div class="col-md-8 right">
@@ -88,7 +103,7 @@ $record = mysqli_fetch_assoc($result_set);
       <div class="row but">
         <div class="col-md-3">
         <button type="button" onclick="myFunction()" class="form-control" name="button">Edit info</button><br>
-          <input type="submit" class="form-control" name="sub" value="Update Info">
+          <!-- <input type="submit" class="form-control" name="sub" value="Update Info"> -->
         </div>
       </div>
     </div>
