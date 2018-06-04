@@ -27,10 +27,19 @@ header h2{
 }
 .left{
   margin-right: 2%;
+  margin-left: -10%;
 }
 .first{
   margin-top: 5%;
   color: white;
+  /* margin-left: -2%; */
+}
+.bio{
+  margin-left: -11%;
+  margin-right: 10%;
+}
+.bio h4{
+color: rgb(55, 150, 240);
 }
 .but{
   margin-top: 2%;
@@ -49,12 +58,12 @@ header h2{
   border: none;
 }
 
-.but input[type="submit"]{
-  /* background-color: rgb(245, 168, 16); */
-  color: Black;
+.about input[type="button"]{
+  background-color: rgb(55, 150, 240);
+  color: white;
   border: none;
 }
-.but input[type="submit"]:hover{
+.about input[type="submit"]{
   background-color: rgb(245, 168, 16);
   transition: ease-in 1s;
   color: white;

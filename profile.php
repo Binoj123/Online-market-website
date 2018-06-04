@@ -3,10 +3,9 @@
 session_start();
 $user = $_SESSION['susername'];
 $id = $_SESSION['sid'];
-echo $user;
-echo $id;
+
 //
-$querys = "SELECT * FROM signup WHERE email='$user'";
+$querys = "SELECT * FROM signup WHERE id='$id'";
 $result_set = mysqli_query($connction,$querys);
 $record = mysqli_fetch_assoc($result_set);
 $id = $record['id'];
@@ -14,15 +13,19 @@ $id = $record['id'];
   // $row=$result_set->fetch_array(MYSQLI_ASSOC);
   if (isset($_POST['sub'])) {
     $namen = $_POST['namenew'];
-  $queryu = "UPDATE signup SET name='$namen',telephone='telephonenew',district='districtnew',city='citynew' WHERE id=$id";
+    $emailn = $_POST['emailnew'];
+    $telephonen = $_POST['telephonenew'];
+    $districtn = $_POST['districtnew'];
+    $cityn = $_POST['citynew'];
+  $queryu = "UPDATE signup SET name='$namen',email='$emailn',telephone='$telephonen',district='$districtn',city='$cityn' WHERE id=$id";
   $resultu = mysqli_query($connction,$queryu);
 header("Refresh:0");
 
   if ($resultu) {
-    echo "updated";
+    // echo "updated";
 
   }else {
-    echo "not updated";
+    // echo "not updated";
   }
 $connction->close();
 }
@@ -72,8 +75,8 @@ $connction->close();
     </div>
     <div class="container first">
       <div class="row">
-        <div class="col-md-4">
-          <h5>Bio of yourself</h5>
+        <div class="col-md-4 bio">
+          <h4>Bio of yourself</h4>
         </div>
         <div class="col-md-8">
             <h5>Your posts</h5>
@@ -86,7 +89,7 @@ $connction->close();
 
           <p>Name </p><br>
           <p>Email </p><br>
-          <p>Telephone </p><br>
+          <p>Telephone(+94) </p><br>
           <p>District </p><br>
           <p>City </p>
         </div>
@@ -122,9 +125,10 @@ $connction->close();
               <option <?php if($district == 'Mullative') echo"selected"; ?>>Mullative</option>
               <option <?php if($district == 'Kilinochchi') echo"selected"; ?>>Kilinochchi</option>
               <option <?php if($district == 'Jaffna') echo"selected"; ?>>Jaffna</option>
-            </select>
-            <input type="text" class="form-control" name="citynew" value="<?php echo $city; ?>" disabled>
-  <input type="submit" class="form-control" name="sub" value="Update Info">
+            </select><br>
+            <input type="text" class="form-control" name="citynew" value="<?php echo $city; ?>" disabled><br>
+            <input id="hide" type="button" onclick="myFunction()" class="form-control" value="Edit info" name="button">
+            <input id="show" type="submit" class="form-control" name="sub" value="Update Info">
           </form>
 
           <!-- <p id="editor"></p> -->
@@ -134,12 +138,7 @@ $connction->close();
         </div>
 
       </div>
-      <div class="row but">
-        <div class="col-md-3">
-        <button type="button" onclick="myFunction()" class="form-control" name="button">Edit info</button><br>
-          <!-- <input type="submit" class="form-control" name="sub" value="Update Info"> -->
-        </div>
-      </div>
+
     </div>
     <script type="text/javascript">
     function myFunction() {
@@ -148,8 +147,29 @@ $connction->close();
 document.getElementsByTagName("INPUT")[0].removeAttribute("disabled");
 document.getElementsByTagName("INPUT")[1].removeAttribute("disabled");
 document.getElementsByTagName("INPUT")[2].removeAttribute("disabled");
+document.getElementsByTagName("SELECT")[0].removeAttribute("disabled");
 document.getElementsByTagName("INPUT")[3].removeAttribute("disabled");
-document.getElementsByTagName("INPUT")[4].removeAttribute("disabled");
+
+  // document.getElementsByTagName("INPUT")[4].setAttribute("onclick", "none");
+  //   // document.getElementsByTagName("INPUT")[4].setAttribute("value", "update info");
+  //   document.getElementsByTagName("INPUT")[4].setAttribute("name", "sub");
+
+  $(document).ready(function(){
+          $("#show").show();
+            $("#hide").hide();
+  });
+
+  }
+
+  $(document).ready(function(){
+          $("#hide").show();
+          $("#show").hide();
+  });
+  function changer(){
+    document.getElementsByTagName("INPUT")[4].setAttribute("type", "submit");
+    document.getElementsByTagName("INPUT")[4].setAttribute("name", "sub");
+    document.getElementsByTagName("INPUT")[4].setAttribute("value", "update info");
+    document.getElementsByTagName("INPUT")[4].setAttribute("onclick", "none");
   }
     // $(document).ready(function (){
     //          });

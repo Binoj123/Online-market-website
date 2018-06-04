@@ -20,11 +20,14 @@ $row=$result_set->fetch_array(MYSQLI_ASSOC);
 $result_set->data_seek($i);
 $email=$row['email'];
 $qpassword=$row['password'];
+$id=$row['id'];
 
 if (($email==$username)&&($qpassword==$password)) {
   session_start();
    $_SESSION['susername'] = $username;
    $_SESSION['spassword'] = $password;
+   $_SESSION['sid'] = $id;
+   // echo $id;
   ?>
   <!-- Button trigger modal -->
   <!-- Modal -->
