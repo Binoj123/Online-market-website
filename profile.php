@@ -5,6 +5,7 @@ $user = $_SESSION['susername'];
 $id = $_SESSION['sid'];
 
 //
+$query = "SELECT * FROM sell_item WHERE email='$user'";
 $querys = "SELECT * FROM signup WHERE id='$id'";
 $result_set = mysqli_query($connction,$querys);
 $record = mysqli_fetch_assoc($result_set);
@@ -96,8 +97,8 @@ $connction->close();
         <div class="col-md-2.3 about">
           <form  action="profile.php" method="post">
             <input type="text" class="form-control" name="namenew" value="<?php echo $name; ?>" disabled><br>
-            <input type="text" class="form-control" name="emailnew" value="<?php echo $email; ?>" disabled><br>
-            <input type="text" class="form-control" name="telephonenew" value="<?php echo $telephone; ?>" disabled><br>
+            <input type="email" class="form-control" name="emailnew" value="<?php echo $email; ?>" disabled><br>
+            <input type="text" class="form-control" maxlength="9" pattern="^[_0-9]{1,}$" name="telephonenew" value="<?php echo $telephone; ?>" disabled><br>
             <!-- <input type="text" class="form-control" name="districtnew" value="<?php echo $district; ?>" disabled><br> -->
             <select class="form-control" name="districtnew" id="sel1" disabled>
               <option <?php if($district == 'Colombo') echo"selected"; ?>>Colombo</option>
