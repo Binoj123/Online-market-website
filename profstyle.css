@@ -27,7 +27,7 @@ header h2{
 }
 .left{
   margin-right: 2%;
-  margin-left: -10%;
+  margin-left: 5%;
 }
 .first{
   margin-top: 5%;
@@ -36,9 +36,12 @@ header h2{
 }
 .bio{
   margin-left: -11%;
-  margin-right: 10%;
+  margin-right: 2.5%;
 }
 .bio h4{
+color: rgb(55, 150, 240);
+}
+.posts{
 color: rgb(55, 150, 240);
 }
 .but{
@@ -68,4 +71,21 @@ color: rgb(55, 150, 240);
   transition: ease-in 1s;
   color: white;
   border: none;
+}
+.listed img{
+width: 100px;
+height: 100px;
+}
+.right{
+  margin-left: 5%;
+}
+.one_row{
+  /* background-color: white; */
+
+}
+.last{
+  margin-top: 1%;
+}
+.first_but{
+  margin-bottom:3px;
 }

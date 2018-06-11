@@ -79,12 +79,12 @@ $connction->close();
         <div class="col-md-4 bio">
           <h4>Bio of yourself</h4>
         </div>
-        <div class="col-md-8">
-            <h5>Your posts</h5>
+        <div class="col-md-8 posts">
+            <h4>Your posts</h4>
         </div>
       </div>
     </div>
-    <div class="container mid">
+    <div class="container-fluid mid">
       <div class="row">
         <div class="col-md-1.7 left">
 
@@ -135,6 +135,29 @@ $connction->close();
           <!-- <p id="editor"></p> -->
         </div>
         <div class="col-md-8 right">
+          <div class="row one_row">
+            <div class="col-md-1.5 listed">
+              <img src="images/user2.jpg" alt="upload image">
+            </div>
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-8">
+                  <h4>topic</h4>
+                </div>
+                <div class="col-md-4">
+                  <p>date of issue</p>
+                </div>
+              </div>
+              <p>ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum
+              ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum</p>
+            </div>
+            <div class="col-md-1.5 last">
+              <button type="button" class="first_but btn btn-secondary btn-sm btn-block" name="button">edit</button>
+              <button type="button" class="btn btn-secondary btn-sm btn-block" name="button">delete</button>
+            </div>
+          </div>
+          <br>
+
 
         </div>
 
