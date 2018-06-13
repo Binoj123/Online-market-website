@@ -4,43 +4,7 @@ session_start();
 $user = $_SESSION['susername'];
 $id = $_SESSION['sid'];
 
-$result_set = mysqli_query($connction,$query);
-  $queryv = "SELECT * FROM sell_item";
 
-$rows= $result_set->num_rows;
-for($i=1;$i<=$rows;$i++){
-$row=$result_set->fetch_array(MYSQLI_ASSOC);
-$result_set->data_seek($i);
-$nameofsell=$row['nameofsell'];
-$path="ums/".$row['path'];
-$price=$row['price'];
-$location=$row['location'];
-$date=$row['date'];
-$dbcatagory=$row['catagory'];
-
-date_default_timezone_set("Asia/Colombo");
-$start_date = new DateTime();
-$since_start = $start_date->diff(new DateTime($date));
-$id=$row['id'];
-if ($since_start->y>0) {
-  echo $since_start->y.' years';
-}else {
-      if ($since_start->m>0) {
-      echo $since_start->m.' months';
-      }else{
-          if ($since_start->d>0) {
-          echo $since_start->d.' days';
-          }else {
-            if ($since_start->h>0) {
-              echo $since_start->h.' hours';
-            }else {
-              echo $since_start->i.' minutes';
-            }
-
-  }
-  }
-}
-}
 
 //
 $query = "SELECT * FROM sell_item WHERE email='$user'";
@@ -57,7 +21,9 @@ $id = $record['id'];
     $districtn = $_POST['districtnew'];
     $cityn = $_POST['citynew'];
   $queryu = "UPDATE signup SET name='$namen',email='$emailn',telephone='$telephonen',district='$districtn',city='$cityn' WHERE id=$id";
+  $queryv = "UPDATE sell_item SET uname='$namen',email='$emailn', phone='$telephonen',location='$districtn',city='$cityn' WHERE id=$id";
   $resultu = mysqli_query($connction,$queryu);
+  $resultv = mysqli_query($connction,$queryv);
 header("Refresh:0");
 
   if ($resultu) {
@@ -74,6 +40,44 @@ $connction->close();
   $telephone = $record['telephone'];
   $district = $record['district'];
   $city = $record['city'];
+
+  $result_set = mysqli_query($connction,$query);
+    $queryv = "SELECT * FROM sell_item";
+
+  $rows= $result_set->num_rows;
+  for($i=1;$i<=$rows;$i++){
+  $row=$result_set->fetch_array(MYSQLI_ASSOC);
+  $result_set->data_seek($i);
+  $nameofsell=$row['nameofsell'];
+  $path="ums/".$row['path'];
+  $price=$row['price'];
+  $location=$row['location'];
+  $date=$row['date'];
+  $dbcatagory=$row['catagory'];
+
+  date_default_timezone_set("Asia/Colombo");
+  $start_date = new DateTime();
+  $since_start = $start_date->diff(new DateTime($date));
+  $id=$row['id'];
+  if ($since_start->y>0) {
+    echo $since_start->y.' years';
+  }else {
+        if ($since_start->m>0) {
+        echo $since_start->m.' months';
+        }else{
+            if ($since_start->d>0) {
+            echo $since_start->d.' days';
+            }else {
+              if ($since_start->h>0) {
+                echo $since_start->h.' hours';
+              }else {
+                echo $since_start->i.' minutes';
+              }
+
+    }
+    }
+  }
+  }
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
