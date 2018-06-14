@@ -21,7 +21,7 @@ $id = $record['id'];
     $districtn = $_POST['districtnew'];
     $cityn = $_POST['citynew'];
   $queryu = "UPDATE signup SET name='$namen',email='$emailn',telephone='$telephonen',district='$districtn',city='$cityn' WHERE id=$id";
-  $queryv = "UPDATE sell_item SET uname='$namen',email='$emailn', phone='$telephonen',location='$districtn',city='$cityn' WHERE id=$id";
+  $queryv = "UPDATE sell_item SET uname='$namen',email='$emailn', phone='$telephonen',location='$districtn',city='$cityn' WHERE email=$user";
   $resultu = mysqli_query($connction,$queryu);
   $resultv = mysqli_query($connction,$queryv);
 header("Refresh:0");
@@ -41,43 +41,10 @@ $connction->close();
   $district = $record['district'];
   $city = $record['city'];
 
-  $result_set = mysqli_query($connction,$query);
-    $queryv = "SELECT * FROM sell_item";
+  // $result_set = mysqli_query($connction,$query);
 
-  $rows= $result_set->num_rows;
-  for($i=1;$i<=$rows;$i++){
-  $row=$result_set->fetch_array(MYSQLI_ASSOC);
-  $result_set->data_seek($i);
-  $nameofsell=$row['nameofsell'];
-  $path="ums/".$row['path'];
-  $price=$row['price'];
-  $location=$row['location'];
-  $date=$row['date'];
-  $dbcatagory=$row['catagory'];
 
-  date_default_timezone_set("Asia/Colombo");
-  $start_date = new DateTime();
-  $since_start = $start_date->diff(new DateTime($date));
-  $id=$row['id'];
-  if ($since_start->y>0) {
-    echo $since_start->y.' years';
-  }else {
-        if ($since_start->m>0) {
-        echo $since_start->m.' months';
-        }else{
-            if ($since_start->d>0) {
-            echo $since_start->d.' days';
-            }else {
-              if ($since_start->h>0) {
-                echo $since_start->h.' hours';
-              }else {
-                echo $since_start->i.' minutes';
-              }
 
-    }
-    }
-  }
-  }
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -96,6 +63,7 @@ $connction->close();
   </head>
   <body>
     <div class="container-fluid">
+
       <div class="row">
         <div class="col-md-4">
           <div class="logo">
@@ -177,6 +145,48 @@ $connction->close();
           <!-- <p id="editor"></p> -->
         </div>
         <div class="col-md-8 right">
+
+          <?php
+            $queryv = "SELECT * FROM sell_item WHERE email='$user'";
+            $result_set = mysqli_query($connction,$queryv);
+
+          $rows= $result_set->num_rows;
+          for($i=1;$i<=$rows;$i++){
+          $row=$result_set->fetch_array(MYSQLI_ASSOC);
+          $result_set->data_seek($i);
+
+          $nameofsell=$row['nameofsell'];
+          $path="ums/".$row['path'];
+          $price=$row['price'];
+          $location=$row['location'];
+          $date=$row['date'];
+          $dbcatagory=$row['catagory'];
+
+          date_default_timezone_set("Asia/Colombo");
+          $start_date = new DateTime();
+          $since_start = $start_date->diff(new DateTime($date));
+          $id=$row['id'];
+          // if ($since_start->y>0) {
+          //   echo $since_start->y.' years';
+          // }else {
+          //       if ($since_start->m>0) {
+          //       echo $since_start->m.' months';
+          //       }else{
+          //           if ($since_start->d>0) {
+          //           echo $since_start->d.' days';
+          //           }else {
+          //             if ($since_start->h>0) {
+          //               echo $since_start->h.' hours';
+          //             }else {
+          //               echo $since_start->i.' minutes';
+          //             }
+          //
+          //   }
+          //   }
+          // }
+
+
+        echo<<<_END
           <div class="row one_row">
             <div class="col-md-1.5 listed">
               <img src="images/user2.jpg" alt="upload image">
@@ -184,7 +194,7 @@ $connction->close();
             <div class="col-md-9">
               <div class="row">
                 <div class="col-md-8">
-                  <h4>topic</h4>
+                  <h4>$nameofsell</h4>
                 </div>
                 <div class="col-md-4">
                   <p>date of issue</p>
@@ -198,6 +208,8 @@ $connction->close();
               <button type="button" class="btn btn-secondary btn-sm btn-block" name="button">delete</button>
             </div>
           </div>
+_END;
+          }  ?>
           <br>
 
 
