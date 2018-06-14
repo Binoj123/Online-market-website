@@ -4,6 +4,8 @@ session_start();
 $user = $_SESSION['susername'];
 $id = $_SESSION['sid'];
 
+echo $user;
+
 
 
 //
@@ -20,10 +22,19 @@ $id = $record['id'];
     $telephonen = $_POST['telephonenew'];
     $districtn = $_POST['districtnew'];
     $cityn = $_POST['citynew'];
+
   $queryu = "UPDATE signup SET name='$namen',email='$emailn',telephone='$telephonen',district='$districtn',city='$cityn' WHERE id=$id";
-  $queryv = "UPDATE sell_item SET uname='$namen',email='$emailn', phone='$telephonen',location='$districtn',city='$cityn' WHERE email=$user";
+
   $resultu = mysqli_query($connction,$queryu);
-  $resultv = mysqli_query($connction,$queryv);
+  if ($resultu) {
+    echo "woking on it";
+    $queryv = "UPDATE sell_item SET uname='$namen',email='$emailn' WHERE email='$user'";
+    $resultv = mysqli_query($connction,$queryv);
+    // code...
+  }else {
+    echo "not working on it";
+  }
+
 header("Refresh:0");
 
   if ($resultu) {
