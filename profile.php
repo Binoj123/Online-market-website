@@ -4,9 +4,7 @@ session_start();
 $user = $_SESSION['susername'];
 $id = $_SESSION['sid'];
 
-echo $user;
-
-
+// echo $user;
 
 //
 $query = "SELECT * FROM sell_item WHERE email='$user'";
@@ -26,9 +24,33 @@ $id = $record['id'];
   $queryu = "UPDATE signup SET name='$namen',email='$emailn',telephone='$telephonen',district='$districtn',city='$cityn' WHERE id=$id";
 
   $resultu = mysqli_query($connction,$queryu);
+ //  session_unset();
+ //  // destroy the session
+ //  session_destroy();
+ //  $query = "SELECT * FROM signup";
+ //
+ //  $result_set = mysqli_query($connction,$query);
+ //
+ //  $row=$result_set->fetch_array(MYSQLI_ASSOC);
+ // $username=$row['email'];
+ // $password=$row['password'];
+ // $id=$row['id'];
+ //
+ //  session_start();
+ //  $_SESSION['susername'] = $username;
+ //  $_SESSION['spassword'] = $password;
+ //  $_SESSION['sid'] = $id;
+ //  echo $username;
+
   if ($resultu) {
     echo "woking on it";
-    $queryv = "UPDATE sell_item SET uname='$namen',email='$emailn' WHERE email='$user'";
+    $querye = "SELECT email FROM signup WHERE id = '$id'";
+    $resultt_set = mysqli_query($connction,$querye);
+    // $record = mysqli_fetch_assoc($result_set);
+    $rowt=$resultt_set->fetch_array(MYSQLI_ASSOC);
+    $emailnee=$rowt['email'];
+    echo $emailnee;
+    $queryv = "UPDATE sell_item SET uname='$namen',email='$emailn' WHERE email='$emailnee'";
     $resultv = mysqli_query($connction,$queryv);
     // code...
   }else {
@@ -83,7 +105,8 @@ $connction->close();
         </div>
         <div class="col-md-4">
           <header>
-            <h2>Hi <?php echo $name; ?>, Welcome to your profile..!</h2>
+            <h2>Hi
+              <?php echo $name; ?>, Welcome to your profile..!</h2>
           </header>
         </div>
         <div class="col-md-4">
@@ -158,7 +181,14 @@ $connction->close();
         <div class="col-md-8 right">
 
           <?php
-            $queryv = "SELECT * FROM sell_item WHERE email='$user'";
+          $querye = "SELECT email FROM signup WHERE id = '$id'";
+
+          $resultt_set = mysqli_query($connction,$querye);
+          // $record = mysqli_fetch_assoc($result_set);
+          $rowt=$resultt_set->fetch_array(MYSQLI_ASSOC);
+             $emailn=$rowt['email'];
+          // echo $emailn;
+            $queryv = "SELECT * FROM sell_item WHERE email='$emailn'";
             $result_set = mysqli_query($connction,$queryv);
 
           $rows= $result_set->num_rows;
