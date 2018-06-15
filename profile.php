@@ -24,23 +24,25 @@ $id = $record['id'];
   $queryu = "UPDATE signup SET name='$namen',email='$emailn',telephone='$telephonen',district='$districtn',city='$cityn' WHERE id=$id";
 
   $resultu = mysqli_query($connction,$queryu);
- //  session_unset();
- //  // destroy the session
- //  session_destroy();
- //  $query = "SELECT * FROM signup";
- //
- //  $result_set = mysqli_query($connction,$query);
- //
- //  $row=$result_set->fetch_array(MYSQLI_ASSOC);
- // $username=$row['email'];
- // $password=$row['password'];
- // $id=$row['id'];
- //
- //  session_start();
- //  $_SESSION['susername'] = $username;
- //  $_SESSION['spassword'] = $password;
- //  $_SESSION['sid'] = $id;
- //  echo $username;
+  $temp = $user;
+  // session_start();
+  session_unset();
+  // destroy the session
+  session_destroy();
+  $query = "SELECT * FROM signup WHERE id='$id'";
+
+  $result_set = mysqli_query($connction,$query);
+
+  $row=$result_set->fetch_array(MYSQLI_ASSOC);
+ $username=$row['email'];
+ $password=$row['password'];
+ $id=$row['id'];
+
+  session_start();
+  $_SESSION['susername'] = $username;
+  $_SESSION['spassword'] = $password;
+  $_SESSION['sid'] = $id;
+  // echo $username;
 
   if ($resultu) {
     echo "woking on it";
@@ -49,8 +51,8 @@ $id = $record['id'];
     // $record = mysqli_fetch_assoc($result_set);
     $rowt=$resultt_set->fetch_array(MYSQLI_ASSOC);
     $emailnee=$rowt['email'];
-    echo $emailnee;
-    $queryv = "UPDATE sell_item SET uname='$namen',email='$emailn' WHERE email='$emailnee'";
+    // echo $emailnee;
+    $queryv = "UPDATE sell_item SET uname='$namen',email='$emailnee',phone='$telephonen',location='$districtn',city='$cityn' WHERE email='$temp'";
     $resultv = mysqli_query($connction,$queryv);
     // code...
   }else {
