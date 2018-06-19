@@ -14,6 +14,12 @@ $record = mysqli_fetch_assoc($result_set);
 $id = $record['id'];
 // echo $id;
   // $row=$result_set->fetch_array(MYSQLI_ASSOC);
+    if (isset($_POST['butdelete'])) {
+      echo "hi";
+      echo $ids;
+      // $query = "DELETE * FROM sell_item WHERE id='$ids'";
+      //   $resultd = mysqli_query($connction,$queryd);
+    }
   if (isset($_POST['sub'])) {
     $namen = $_POST['namenew'];
     $emailn = $_POST['emailnew'];
@@ -198,6 +204,7 @@ $connction->close();
           $row=$result_set->fetch_array(MYSQLI_ASSOC);
           $result_set->data_seek($i);
 
+          $ids=$row['id'];
           $nameofsell=$row['nameofsell'];
           $path="ums/".$row['path'];
           $price=$row['price'];
@@ -248,7 +255,7 @@ $connction->close();
             </div>
             <div class="col-md-1.5 last">
               <button type="button" class="first_but btn btn-secondary btn-sm btn-block" name="button">edit</button>
-              <button type="button" class="btn btn-secondary btn-sm btn-block" name="button">delete</button>
+              <input type="submit" class="form-control" name="butdelete" value="Delete">
             </div>
           </div>
 _END;
