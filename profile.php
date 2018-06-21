@@ -16,12 +16,17 @@ $id = $record['id'];
   // $row=$result_set->fetch_array(MYSQLI_ASSOC);
     if (isset($_POST['butdelete'])) {
       $ids=$_POST['ids'];
-      echo "hi";
-      echo $ids;
 
-      // $query = "DELETE * FROM sell_item WHERE id='$ids'";
-      //   $resultd = mysqli_query($connction,$queryd);
+       $queryd = "DELETE FROM sell_item WHERE id='$ids' LIMIT 1";
+       $resultd = mysqli_query($connction,$queryd);
+       if ($resultd) {
+         echo "succesfully deleted";
+       }else{
+         echo "not deleted";
+       }
     }
+
+
   if (isset($_POST['sub'])) {
     $namen = $_POST['namenew'];
     $emailn = $_POST['emailnew'];
@@ -202,10 +207,7 @@ $connction->close();
             $result_set = mysqli_query($connction,$queryv);
 
           $rows= $result_set->num_rows;
-          ?>
-          <form action="profile.php" method="post">
 
-          <?php
           for($i=1;$i<=$rows;$i++){
           $row=$result_set->fetch_array(MYSQLI_ASSOC);
           $result_set->data_seek($i);
@@ -214,6 +216,7 @@ $connction->close();
           $nameofsell=$row['nameofsell'];
           $path="ums/".$row['path'];
           $price=$row['price'];
+          $doi=$row['doi'];
           $location=$row['location'];
           $date=$row['date'];
           $dbcatagory=$row['catagory'];
@@ -245,7 +248,8 @@ $connction->close();
         echo<<<_END
           <div class="row one_row">
             <div class="col-md-1.5 listed">
-              <img src="images/user2.jpg" alt="upload image">
+
+              <img src="$path" alt="item-photo">
             </div>
             <div class="col-md-9">
               <div class="row">
@@ -256,18 +260,22 @@ $connction->close();
                   <p>date of issue$ids</p>
                 </div>
               </div>
-              <p>ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum
-              ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum</p>
-            </div>
+              <p>$doi</p></div>
             <div class="col-md-1.5 last">
-              <button type="button" class="first_but btn btn-secondary btn-sm btn-block" name="button">edit</button>
+            <form action="selledit.php" method="post">
+        <input type="hidden" value="$ids" name="ids">
+          <button type="submit" class="first_but btn btn-secondary btn-sm btn-block" name="buttone">edit</button>
+          </form>
+
+                <form action="profile.php" method="post">
+            <input type="hidden" value="$ids" name="ids">
               <input type="submit" class="form-control" name="butdelete" value="Delete">
-                <input type="hidden" value="$ids" name="ids">
+              </form>
             </div>
-          </div>
+          </div></br>
 _END;
           }?>
-            </form>
+
           <br>
 
 
