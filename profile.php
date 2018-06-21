@@ -15,8 +15,10 @@ $id = $record['id'];
 // echo $id;
   // $row=$result_set->fetch_array(MYSQLI_ASSOC);
     if (isset($_POST['butdelete'])) {
+      $ids=$_POST['ids'];
       echo "hi";
       echo $ids;
+
       // $query = "DELETE * FROM sell_item WHERE id='$ids'";
       //   $resultd = mysqli_query($connction,$queryd);
     }
@@ -200,6 +202,10 @@ $connction->close();
             $result_set = mysqli_query($connction,$queryv);
 
           $rows= $result_set->num_rows;
+          ?>
+          <form action="profile.php" method="post">
+
+          <?php
           for($i=1;$i<=$rows;$i++){
           $row=$result_set->fetch_array(MYSQLI_ASSOC);
           $result_set->data_seek($i);
@@ -247,7 +253,7 @@ $connction->close();
                   <h4>$nameofsell</h4>
                 </div>
                 <div class="col-md-4">
-                  <p>date of issue</p>
+                  <p>date of issue$ids</p>
                 </div>
               </div>
               <p>ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum
@@ -256,10 +262,12 @@ $connction->close();
             <div class="col-md-1.5 last">
               <button type="button" class="first_but btn btn-secondary btn-sm btn-block" name="button">edit</button>
               <input type="submit" class="form-control" name="butdelete" value="Delete">
+                <input type="hidden" value="$ids" name="ids">
             </div>
           </div>
 _END;
-          }  ?>
+          }?>
+            </form>
           <br>
 
 
