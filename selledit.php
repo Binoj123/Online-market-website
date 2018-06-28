@@ -23,6 +23,8 @@ if (isset($_SESSION['susername'])){
     $conditionofitem = $record['conditionofitem'];
     $doi = $record['doi'];
     $path = $record['path'];
+    echo $conditionofitem;
+    echo $path;
 ?>
 
 <!DOCTYPE html>
@@ -109,37 +111,37 @@ if (isset($_SESSION['susername'])){
 <div class="form-group">
 <label for="sel2">Catagory</label>
 <select class="form-control" name="catagory" id="sel2">
-<option>Electronics</option>
-<option>Cars & Vehicles</option>
-<option>Property</option>
-<option>Jobs</option>
-<option>Music & Instruments</option>
-<option>Work Overseas</option>
-<option>Home & garden</option>
-<option>Fasion, healthy & beauty</option>
-<option>Kids items</option>
-<option>Business & industry</option>
-<option>Services</option>
-<option>Education</option>
-<option>Animals</option>
-<option>Food & Agriculture</option>
-<option>Arts & Handmades</option>
-<option>Hobby & Sports</option>
-<option>Other</option>
+<option <?php if($catagory == 'Electronics') echo"selected"; ?>>Electronics</option>
+<option <?php if($catagory == 'Cars & Vehicles') echo"selected"; ?>>Cars & Vehicles</option>
+<option <?php if($catagory == 'Property') echo"selected"; ?> >Property</option>
+<option <?php if($catagory == 'Jobs') echo"selected"; ?>>Jobs</option>
+<option <?php if($catagory == 'Music & Instruments') echo"selected"; ?>>Music & Instruments</option>
+<option <?php if($catagory == 'Work Overseas') echo"selected"; ?>>Work Overseas</option>
+<option <?php if($catagory == 'Home & garden') echo"selected"; ?>>Home & garden</option>
+<option <?php if($catagory == 'Fasion, healthy & beauty') echo"selected"; ?>>Fasion, healthy & beauty</option>
+<option <?php if($catagory == 'Kids items') echo"selected"; ?>>Kids items</option>
+<option <?php if($catagory == 'Business & industry') echo"selected"; ?>>Business & industry</option>
+<option <?php if($catagory == 'Services') echo"selected"; ?>>Services</option>
+<option <?php if($catagory == 'Education') echo"selected"; ?>>Education</option>
+<option <?php if($catagory == 'Animals') echo"selected"; ?>>Animals</option>
+<option <?php if($catagory == 'Food & Agriculture') echo"selected"; ?>>Food & Agriculture</option>
+<option <?php if($catagory == 'Arts & Handmades') echo"selected"; ?>>Arts & Handmades</option>
+<option <?php if($catagory == 'Hobby & Sports') echo"selected"; ?>>Hobby & Sports</option>
+<option <?php if($catagory == 'Other') echo"selected"; ?>>Other</option>
 </select>
 </div><br>
 <div class="row">
   <div class="col-lg-6">
     <label>Price(.00)</label><br>
-  <input type="text" name="price" maxlength="15" pattern="^[_0-9]{1,}$" placeholder="Price x (Rs.x.00)" class="form-control" required><br>
+  <input type="text" name="price" maxlength="15" pattern="^[_0-9]{1,}$" value="<?php echo $price; ?>"placeholder="Price x (Rs.x.00)" class="form-control" required><br>
   </div>
   <div class="col-lg-6">
     <div class="form-group">
 <label for="sel3">Condition</label>
 <select  class="form-control" name="conditionofitem" id="sel3">
-  <option>None</option>
-  <option>New</option>
-  <option>Used</option>
+  <option <?php if($conditionofitem == 'None') echo"selected"; ?>>None</option>
+  <option <?php if($conditionofitem == 'New') echo"selected"; ?>>New</option>
+  <option <?php if($conditionofitem == 'Used') echo"selected"; ?>>Used</option>
 </select>
     </div>
   </div>
@@ -147,13 +149,13 @@ if (isset($_SESSION['susername'])){
 <div class="row">
   <div class="col-lg-6">
     <div class="des">
-      <textarea name="doi" class="form-control" rows="12" placeholder="Description of Item" required></textarea>
+      <textarea name="doi" class="form-control" rows="12" placeholder="Description of Item" required><?php echo $doi; ?></textarea>
       <br>
     </div>
   </div>
   <div class="col-lg-6">
 
-    <input name="fileupload" id="fileupload" type="file"  />
+        <input name="fileupload" id="fileupload" type="file" value="<?php echo $path ?>" />
     <hr/>
     <div id="dvPreview">
     </div>
@@ -287,7 +289,7 @@ else {
         <div class="mheading">
           <h2 class="text-center">Login to patas.lk</h2>
         </div>
-<form accept-charset="UTF-8" action="/patas/login.php" class="modal-content animate" method="post"  >
+<form accept-charset="UTF-8" action="" class="modal-content animate" method="post"  >
 
 
     <div  class="imgcontainer">
