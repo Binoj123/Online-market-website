@@ -155,10 +155,27 @@ if (isset($_SESSION['susername'])){
   </div>
   <div class="col-lg-6">
 
-        <input name="fileupload" id="fileupload" type="file" value="<?php echo $path ?>" />
-    <hr/>
-    <div id="dvPreview">
-    </div>
+
+        <input type="submit" name="editpic" value="Edit Pic">
+      <?php
+
+      if (isset($_POST['editpic'])) {?>
+
+  <input name="fileupload" onclick="myFunction()" id="fileupload" type="file" />
+  <div id="dvPreview">
+  </div>
+
+  <?php
+}
+  else {
+    ?>
+    <img src="<?php echo $path; ?>" alt="image">
+<hr/>
+    <?php
+  }
+     ?>
+
+
 
   </div>
   </div>
@@ -289,7 +306,7 @@ else {
         <div class="mheading">
           <h2 class="text-center">Login to patas.lk</h2>
         </div>
-<form accept-charset="UTF-8" action="" class="modal-content animate" method="post"  >
+<form accept-charset="UTF-8" action="selledit.php" class="modal-content animate" method="post"  >
 
 
     <div  class="imgcontainer">
