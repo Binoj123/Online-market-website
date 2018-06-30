@@ -4,6 +4,7 @@ $ids=$_POST['ids'];
 echo $ids;
 session_start();
 if (isset($_SESSION['susername'])){
+  echo $ids;
   $user = $_SESSION['susername'];
   $querys = "SELECT * FROM sell_item WHERE id='$ids'";
   $result_set = mysqli_query($connction,$querys);
@@ -11,7 +12,7 @@ if (isset($_SESSION['susername'])){
 
     // $row=$result_set->fetch_array(MYSQLI_ASSOC);
 
-
+    $ids  = $record['id'];
     $name = $record['uname'];
     $email = $record['email'];
     $telephone = $record['phone'];
@@ -23,8 +24,56 @@ if (isset($_SESSION['susername'])){
     $conditionofitem = $record['conditionofitem'];
     $doi = $record['doi'];
     $path = $record['path'];
-    echo $conditionofitem;
-    echo $path;
+    // echo $conditionofitem;
+    // echo $path;
+
+    if (isset($_POST['submit'])){
+echo $ids;
+      $ids = $_POST['ids'];
+      $uname = $_POST['uname'];
+      $email = $_POST['email'];
+      $phone = $_POST['phone'];
+      $location = $_POST['district'];
+      $city = $_POST['city'];
+      $nameofsell = $_POST['nameofsell'];
+      $catagory = $_POST['catagory'];
+      $price = $_POST['price'];
+      $conditionofitem =$_POST['conditionofitem'];
+      $doi =$_POST['doi'];
+
+      //date and time
+      date_default_timezone_set("Asia/Colombo");
+      $start_date = new DateTime();
+       echo $start_date->format('Y-m-d H:i:s');
+
+      $target_dir = "photos/";
+      $target_path = $target_dir . basename( $_FILES['fileupload']['name']);
+      move_uploaded_file($_FILES['fileupload']['tmp_name'], $target_path);
+
+
+      $queryup = "UPDATE sell_item SET uname='$uname',email='$email',phone='$phone',location='$location',city='$city',nameofsell='$nameofsell',catagory='$catagory',price='$price',conditionofitem='$conditionofitem',`path`='$target_path' WHERE id=$ids";
+
+      $result = mysqli_query($connction,$queryup);
+      if ($result) {
+         echo "1 record updated";
+          if (move_uploaded_file($_FILES['fileupload']['tmp_name'], $target_path)) {
+            // echo "succesfullty added";
+          }else {
+               echo "<br> Error: " . $queryup."<br>". $connction->error;
+          }
+      }else {
+         echo "database query failed.";
+      }
+
+
+
+        $connction->close();
+
+
+
+      // }
+
+    }
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +108,7 @@ if (isset($_SESSION['susername'])){
 </div>
 </div>
 <div class="container details">
-  <form action="ums/insert-query.php" method="post" enctype="multipart/form-data">
+  <form action="selledit.php" method="post" enctype="multipart/form-data">
 
 
   <div class="row">
@@ -154,28 +203,16 @@ if (isset($_SESSION['susername'])){
     </div>
   </div>
   <div class="col-lg-6">
+    <input id="editpic" type="button" onclick="myFunctionr()" class="form-control" value="Edit pic" name="button">
+    <img id="picture" src="<?php echo $path ?>" alt="image">
+      <!-- <input type="submit" name="editpic" value="Edit Pic"> -->
 
 
-        <input type="submit" name="editpic" value="Edit Pic">
-      <?php
-
-      if (isset($_POST['editpic'])) {?>
-
-  <input name="fileupload" onclick="myFunction()" id="fileupload" type="file" />
-  <div id="dvPreview">
-  </div>
-
-  <?php
-}
-  else {
-    ?>
-    <img src="<?php echo $path; ?>" alt="image">
-<hr/>
-    <?php
-  }
-     ?>
-
-
+    <input name="fileupload" onclick="myFunction()" id="fileupload" type="file" value="path-to-standard-location-for-quicken-data-files"/>
+    <div id="dvPreview">
+    </div>
+    <?php echo $ids ?>
+    <input type="hidden" name="ids" value="<?php echo $ids ?>">
 
   </div>
   </div>
@@ -254,6 +291,19 @@ if (isset($_SESSION['susername'])){
           }
       });
     });
+    $(document).ready(function(){
+            $("#editpic").show();
+            $("#fileupload").hide();
+    });
+
+    function myFunctionr() {
+      $(document).ready(function(){
+              $("#fileupload").show();
+                $("#editpic").hide();
+                $("#picture").hide();
+
+      });
+    }
     </script>
 
 </body>
@@ -337,6 +387,8 @@ else {
 </form>
 </div>
       <script type="text/javascript">
+
+
    function relocate_home()
  {
       location.href = "../index.php";
@@ -345,39 +397,15 @@ else {
 {
     location.href = "../patas/signup.php";
 }
+
+
+
+
+
     </script>
-    <!-- <div class="modal fade" id="memberModall" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="memberModall">You should signing in first!</h4>
-              </div>
-              <div class="modal-body">
-                <p>However the account provided is not known.<BR>
-                If you just got invited to the group, please wait for a day to have the database synchronized.</p>
 
-                <p>You will now be shown the Demo site.</p>
-              </div>
-              <div class="modal-footer">
-                <input type="button" class="btn btn-info" value="Login page" onclick=" relocate_home()"> -->
-           <!--    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button> -->
-               <!-- </div>
-            </div>
-          </div>
-        </div>
-        <script type="text/javascript">
-        $(document).ready(function () {
-
-         $('#memberModall').modal('show');
-
-        });
-        function relocate_home()
-        {
-        location.href = 'index.php';
-        }
-        </script> -->
     </body>
+
     </html>
 
   <?php
