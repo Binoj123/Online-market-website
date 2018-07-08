@@ -225,24 +225,7 @@ $connction->close();
           $start_date = new DateTime();
           $since_start = $start_date->diff(new DateTime($date));
           $id=$row['id'];
-          // if ($since_start->y>0) {
-          //   echo $since_start->y.' years';
-          // }else {
-          //       if ($since_start->m>0) {
-          //       echo $since_start->m.' months';
-          //       }else{
-          //           if ($since_start->d>0) {
-          //           echo $since_start->d.' days';
-          //           }else {
-          //             if ($since_start->h>0) {
-          //               echo $since_start->h.' hours';
-          //             }else {
-          //               echo $since_start->i.' minutes';
-          //             }
-          //
-          //   }
-          //   }
-          // }
+
 
 
         echo<<<_END
@@ -257,7 +240,29 @@ $connction->close();
                   <h4>$nameofsell</h4>
                 </div>
                 <div class="col-md-4">
-                  <p>date of issue$ids</p>
+                  <p>
+_END;
+                  if ($since_start->y>0) {
+                            echo $since_start->y.' years';
+                          }else {
+                                if ($since_start->m>0) {
+                                echo $since_start->m.' months';
+                                }else{
+                                    if ($since_start->d>0) {
+                                    echo $since_start->d.' days';
+                                    }else {
+                                      if ($since_start->h>0) {
+                                        echo $since_start->h.' hours';
+                                      }else {
+                                        echo $since_start->i.' minutes';
+                                      }
+
+                            }
+                            }
+                          }
+
+                echo<<<_END
+                ago</p>
                 </div>
               </div>
               <p>$doi</p></div>
