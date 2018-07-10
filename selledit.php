@@ -1,10 +1,10 @@
 <?php require_once('ums/inc/connection.php') ?>
 <?php
 $ids=$_POST['ids'];
-echo $ids;
+// echo $ids;
 session_start();
 if (isset($_SESSION['susername'])){
-  echo $ids;
+  // echo $ids;
   $user = $_SESSION['susername'];
   $querys = "SELECT * FROM sell_item WHERE id='$ids'";
   $result_set = mysqli_query($connction,$querys);
@@ -25,10 +25,10 @@ if (isset($_SESSION['susername'])){
     $doi = $record['doi'];
     $path = $record['path'];
     // echo $conditionofitem;
-    // echo $path;
+   echo $path;
 
     if (isset($_POST['submit'])){
-echo $ids;
+// echo $ids;
       $ids = $_POST['ids'];
       $uname = $_POST['uname'];
       $email = $_POST['email'];
@@ -40,30 +40,37 @@ echo $ids;
       $price = $_POST['price'];
       $conditionofitem =$_POST['conditionofitem'];
       $doi =$_POST['doi'];
+      $path = $_POST['path'];
+      echo $path;
+
 
       //date and time
       date_default_timezone_set("Asia/Colombo");
       $start_date = new DateTime();
-       echo $start_date->format('Y-m-d H:i:s');
+       // echo $start_date->format('Y-m-d H:i:s');
 
       $target_dir = "photos/";
       $target_path = $target_dir . basename( $_FILES['fileupload']['name']);
       move_uploaded_file($_FILES['fileupload']['tmp_name'], $target_path);
 
+      if($path == "photos/"){
+          $queryup = "UPDATE sell_item SET uname='$uname',email='$email',phone='$phone',location='$location',city='$city',nameofsell='$nameofsell',catagory='$catagory',price='$price',conditionofitem='$conditionofitem',`path`='$path' WHERE id=$ids";
+       }else{
+          $queryup = "UPDATE sell_item SET uname='$uname',email='$email',phone='$phone',location='$location',city='$city',nameofsell='$nameofsell',catagory='$catagory',price='$price',conditionofitem='$conditionofitem',`path`='$target_path' WHERE id=$ids";
+      }
 
-      $queryup = "UPDATE sell_item SET uname='$uname',email='$email',phone='$phone',location='$location',city='$city',nameofsell='$nameofsell',catagory='$catagory',price='$price',conditionofitem='$conditionofitem',`path`='$target_path' WHERE id=$ids";
 
       $result = mysqli_query($connction,$queryup);
-      if ($result) {
-         echo "1 record updated";
-          if (move_uploaded_file($_FILES['fileupload']['tmp_name'], $target_path)) {
-            // echo "succesfullty added";
-          }else {
-               echo "<br> Error: " . $queryup."<br>". $connction->error;
-          }
-      }else {
-         echo "database query failed.";
-      }
+      // if ($result) {
+      //    echo "1 record updated";
+      //     if (move_uploaded_file($_FILES['fileupload']['tmp_name'], $target_path)) {
+      //       // echo "succesfullty added";
+      //     }else {
+      //          echo "<br> Error: " . $queryup."<br>". $connction->error;
+      //     }
+      // }else {
+      //    echo "database query failed.";
+      // }
 
 
 
@@ -213,6 +220,7 @@ echo $ids;
     </div>
     <?php echo $ids ?>
     <input type="hidden" name="ids" value="<?php echo $ids ?>">
+    <input type="hidden" name="path" value="<?php echo $path ?>">
 
   </div>
   </div>
