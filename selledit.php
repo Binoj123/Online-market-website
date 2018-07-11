@@ -53,10 +53,23 @@ if (isset($_SESSION['susername'])){
       $target_path = $target_dir . basename( $_FILES['fileupload']['name']);
       move_uploaded_file($_FILES['fileupload']['tmp_name'], $target_path);
 
-      if($path == "photos/"){
+      if($target_path == "photos/"){
           $queryup = "UPDATE sell_item SET uname='$uname',email='$email',phone='$phone',location='$location',city='$city',nameofsell='$nameofsell',catagory='$catagory',price='$price',conditionofitem='$conditionofitem',`path`='$path' WHERE id=$ids";
+          // header("Location: ../patas/profile.php");
+          // exit;
+          echo '<script type="text/javascript">',
+          'alerting();',
+          '</script>';
+
        }else{
           $queryup = "UPDATE sell_item SET uname='$uname',email='$email',phone='$phone',location='$location',city='$city',nameofsell='$nameofsell',catagory='$catagory',price='$price',conditionofitem='$conditionofitem',`path`='$target_path' WHERE id=$ids";
+          // header("Location: ../patas/profile.php");
+          //     exit;
+          echo '<script type="text/javascript">',
+          'alerting();',
+          '</script>';
+header("Refresh:0");
+
       }
 
 
@@ -312,6 +325,9 @@ if (isset($_SESSION['susername'])){
 
       });
     }
+    function alerting(){
+    alert("succesfully updated");
+}
     </script>
 
 </body>
