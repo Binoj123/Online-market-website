@@ -11,9 +11,10 @@ body{
 
 }
 header img{
-width: 25%;
-height: auto ;
-margin: 40px;
+   width: 100%;
+  height: auto ;
+  margin-top: 10px;
+  /* margin: 40px;  */
 }
 
 .logo img{
