@@ -25,7 +25,7 @@ if (isset($_SESSION['susername'])){
     $doi = $record['doi'];
     $path = $record['path'];
     // echo $conditionofitem;
-   echo $path;
+   // echo $path;
 
     if (isset($_POST['submit'])){
 // echo $ids;
@@ -41,7 +41,7 @@ if (isset($_SESSION['susername'])){
       $conditionofitem =$_POST['conditionofitem'];
       $doi =$_POST['doi'];
       $path = $_POST['path'];
-      echo $path;
+      // echo $path;
 
 
       //date and time
@@ -54,23 +54,24 @@ if (isset($_SESSION['susername'])){
       move_uploaded_file($_FILES['fileupload']['tmp_name'], $target_path);
 
       if($target_path == "photos/"){
-          $queryup = "UPDATE sell_item SET uname='$uname',email='$email',phone='$phone',location='$location',city='$city',nameofsell='$nameofsell',catagory='$catagory',price='$price',conditionofitem='$conditionofitem',`path`='$path' WHERE id=$ids";
-          // header("Location: ../patas/profile.php");
+          $queryup = "UPDATE sell_item SET uname='$uname',email='$email',phone='$phone',location='$location',city='$city',nameofsell='$nameofsell',catagory='$catagory',price='$price',conditionofitem='$conditionofitem',doi='$doi',`path`='$path' WHERE id=$ids";
+           header("Location: ../patas/profile.php");
           // exit;
-          echo '<script type="text/javascript">',
-          'alerting();',
-          '</script>';
+          // echo '<script type="text/javascript">',
+          // 'alerting();',
+          // '</script>';
 
        }else{
-          $queryup = "UPDATE sell_item SET uname='$uname',email='$email',phone='$phone',location='$location',city='$city',nameofsell='$nameofsell',catagory='$catagory',price='$price',conditionofitem='$conditionofitem',`path`='$target_path' WHERE id=$ids";
-          // header("Location: ../patas/profile.php");
+          $queryup = "UPDATE sell_item SET uname='$uname',email='$email',phone='$phone',location='$location',city='$city',nameofsell='$nameofsell',catagory='$catagory',price='$price',conditionofitem='$conditionofitem',doi='$doi',`path`='$target_path' WHERE id=$ids";
+           header("Location: ../patas/profile.php");
           //     exit;
-          echo '<script type="text/javascript">',
-          'alerting();',
-          '</script>';
-header("Refresh:0");
+          // echo '<script type="text/javascript">',
+          // 'alerting();',
+          // '</script>';
+
 
       }
+
 
 
       $result = mysqli_query($connction,$queryup);
