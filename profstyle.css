@@ -85,6 +85,7 @@ height: 100px;
 }
 .last{
   margin-top: 1%;
+  margin-left: 3%;
 }
 .first_but{
   margin-bottom:3px;
@@ -92,5 +93,17 @@ height: 100px;
 
 .one_row{
   /* margin-top: 40%; */
- border: 2px solid white;
+ border: 2px solid gray;
+ border-radius: 5px;
+ margin-right: 10%;
+
+}
+.agocol{
+  margin-top: 10px;
+}
+.topiccol{
+  margin-top: 5px;
+}
+.topiccol h4{
+  color:rgb(245, 168, 16);
 }
