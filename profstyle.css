@@ -89,3 +89,8 @@ height: 100px;
 .first_but{
   margin-bottom:3px;
 }
+
+.one_row{
+  /* margin-top: 40%; */
+ border: 2px solid white;
+}

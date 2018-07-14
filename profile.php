@@ -229,6 +229,7 @@ $connction->close();
 
 
         echo<<<_END
+
           <div class="row one_row">
             <div class="col-md-1.5 listed">
 
@@ -278,6 +279,7 @@ _END;
               </form>
             </div>
           </div></br>
+
 _END;
           }?>
 
