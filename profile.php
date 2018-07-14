@@ -237,11 +237,12 @@ $connction->close();
             </div>
             <div class="col-md-9">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8  topiccol">
                   <h4>$nameofsell</h4>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 agocol">
                   <p>
+
 _END;
                   if ($since_start->y>0) {
                             echo $since_start->y.' years';
@@ -265,8 +266,8 @@ _END;
                 echo<<<_END
                 ago</p>
                 </div>
+              </div><p>$doi</p>
               </div>
-              <p>$doi</p></div>
             <div class="col-md-1.5 last">
             <form action="selledit.php" method="post">
         <input type="hidden" value="$ids" name="ids">
