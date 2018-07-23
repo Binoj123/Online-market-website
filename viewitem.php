@@ -21,6 +21,17 @@
 $result_set = mysqli_query($connction,$query);
   ?>
 
+  <?php
+   if (isset($_GET['pricer'])) {
+     echo "it works";
+     $pricequery = "SELECT * FROM sell_item WHERE price BETWEEN 10 AND 1500";
+     $result_set = mysqli_query($connction,$pricequery);
+
+   }
+
+
+   ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,26 +78,27 @@ $result_set = mysqli_query($connction,$query);
           <option value="mathara">Matara</option>
           <option value="hambanthota">Hambanthota</option>
           <option value="kegalle">Kegalle</option>
-          <option>Rathnapura</option>
-          <option>Badulla</option>
-          <option>Bandarawela</option>
-          <option>Trinkomalee</option>
-          <option>Batticaloa</option>
-          <option>Ampara</option>
-          <option>Kandy</option>
-          <option>Nuwara Eliya</option>
-          <option>Matale</option>
-          <option>Puththalama</option>
-          <option>Kurunegala</option>
-          <option>Anuradhapura</option>
-          <option>Polonnaruwa</option>
-          <option>Mannar</option>
-          <option>Vavniya</option>
-          <option>Mullative</option>
-          <option>Kilinochchi</option>
-          <option>Jaffna</option>
+          <option value="rathnapura">Rathnapura</option>
+          <option value="badulla">Badulla</option>
+          <option value="bandarawela">Bandarawela</option>
+          <option value="trinkomalee">Trinkomalee</option>
+          <option value="batticaloa">Batticaloa</option>
+          <option value="ampara">Ampara</option>
+          <option value="kandy">Kandy</option>
+          <option value="nuwara eliya">Nuwara Eliya</option>
+          <option value="matale">Matale</option>
+          <option value="puththalama">Puththalama</option>
+          <option value="kurunegala">Kurunegala</option>
+          <option value="anuradhapura">Anuradhapura</option>
+          <option value="polonnaruwa">Polonnaruwa</option>
+          <option value="mannar">Mannar</option>
+          <option value="vavniya">Vavniya</option>
+          <option value="mullative">Mullative</option>
+          <option value="kilinochchi">Kilinochchi</option>
+          <option value="jaffna">Jaffna</option>
         </select><br>
         <input type="button" value="Go" class="btn btn-secondary" onClick="window.location.reload()">
+        <input type="submit" value="price go" class="btn btn-secondary" name="pricer">
       </div>
 
 <!-- <div class="container-fluid price_slider">
@@ -101,7 +113,7 @@ $result_set = mysqli_query($connction,$query);
     </div>
   </div>
   <br>
-  <input type="button" value="Go" class="btn btn-secondary" onClick="window.location.reload()">
+    <input type="button" value="Go" class="btn btn-secondary" onClick="window.location.reload()">
   <p></p>
 </div> -->
     </div>
