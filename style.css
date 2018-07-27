@@ -429,3 +429,50 @@ span.psw {
 .logout:hover{
   /* background-color: rgb(255, 142, 0); */
 }
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+    .foot{
+      margin-left: 19%;
+      text-align: center;
+    }
+  .ico{
+    margin-left: -32px;
+    margin-bottom: 5%;
+  }
+  .hero{
+    /* position: relative; */
+  }
+  .hero{
+    font-size: 10px;
+    width: 89%;
+
+padding-right: 0px;
+padding-left: 15px;
+margin-right: auto;
+margin-left: auto;
+  }
+  .button-awsom {
+
+    margin-top: 30px;
+    margin-left: 42px;
+
+}
+.btn-full{
+  margin-top: 6%;
+  margin-left: 2%;
+}
+.mainnav {
+
+    /* width: 100%; */
+    list-style: none;
+    /* float: right; */
+    margin-top: 20px;
+  
+    /* margin-left: 550px; */
+
+
+}
+}
