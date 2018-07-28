@@ -470,9 +470,15 @@ margin-left: auto;
     list-style: none;
     /* float: right; */
     margin-top: 20px;
-  
-    /* margin-left: 550px; */
+    margin-left: 0px auto;
 
 
 }
+.logo img{
+  height: 100px;
+  /* float: left; */
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
 }
