@@ -106,3 +106,48 @@ border-radius: 5px;
   float: right;
   margin-top: -100px;
 }
+.backpage{
+
+}
+@media only screen and (max-width: 320px) {
+  .logo img {
+
+    height: 70px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 39px;
+}
+.backpage{
+  margin: 13px 0px 12px 44px;
+}
+.info {
+
+    width: 314px;
+
+}
+.foot{
+  padding-left:25px;
+  text-align: center;
+}
+.icons li{
+   margin-left: 20px;
+}
+}@media (min-width: 321px) and (max-width: 768px) {
+  .logo img {
+
+    height: 70px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+.backpage{
+  margin: 13px 0px 12px 87px;
+}
+.foot{
+  padding-left: 65px;
+  text-align: center;
+}
+.icons li{
+   margin-left: 35px;
+}
+}
