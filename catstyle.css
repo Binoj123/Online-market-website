@@ -41,7 +41,7 @@ header{
   transform: scale(1.15);
   transition: all .5s;
   opacity: 1;
-  
+
   /* filter: alpha(opacity=50); */
 }
 .meal-photo img:hover{
@@ -165,3 +165,88 @@ float: left;
 .link-button:active {
   color:red;
 }
+@media (min-width: 320px) and (max-width: 768px) {
+  .logo img{
+    width: 100%;
+    /* float: left; */
+    margin-top: 20px;
+    margin-left: -5px;
+  }
+  .meal-showcase{
+    list-style: none;
+    width: 99%;
+    margin-left: -1%;
+  }
+  .meal-showcase li{
+    display: block;
+    width: 100%;
+    /* float: left; */
+
+  }
+  .centerd1{
+    margin-left: 25%;
+  }
+  .centerd2{
+    margin-left: 23%;
+  }
+  .centerd3{
+    margin-left: 30%;
+  }
+  .centerd4{
+    margin-left: 35%;
+  }
+  .centerd5{
+    margin-left: 25%;
+    text-align: center;
+  }
+  .centerd6{
+    margin-left: 20%;
+  }
+  .centerd7{
+    /* margin-left: 20%; */
+  }
+  .centerd8{
+    margin-left: 5%;
+    text-align: center;
+  }
+  .centerd9{
+    margin-left: 30%;
+  }
+  .centerd10{
+    margin-left: 29%;
+  }
+  .centerd11{
+    margin-left: 30%;
+  }
+  .centerd12{
+    margin-left: 39%;
+  }
+  .centerd13{
+    margin-left: 25%;
+  }
+  .centerd14{
+    margin-left: 23%;
+  }
+  .centerd15{
+    margin-left: 30%;
+  }
+  .centerd16{
+    margin-left: 40%;
+  }
+  .foot{
+    margin-left: 19%;
+    text-align: center;
+  }
+.ico{
+  margin-left: -32px;
+  margin-bottom: 5%;
+}
+.icons li{
+  /* float: right; */
+  /* margin-left: 25px; */
+  font-size: 30px;
+ color: white;
+}
+}
+  @media (min-width: 768px) and (max-width: 1024px) {}
+    @media (min-width: 1025px) and (max-width: 1280px) {}
